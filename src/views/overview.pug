@@ -22,16 +22,17 @@ block content
             .container
                 .row
                     .d-flex.justify-content-center.align-items-center.my-5
-                        nav
-                            #nav-tab.nav.nav-tabs.nav-tabs-over(role='tablist')
-                                button#nav-home-tab.nav-tabs-over-link.nav-link.active(data-bs-toggle='tab' data-bs-target='#nav-home' type='button' role='tab' aria-controls='nav-home' aria-selected='true') MY VALIVATOR
-                                button#nav-profile-tab.nav-tabs-over-link.nav-link(data-bs-toggle='tab' data-bs-target='#nav-profile' type='button' role='tab' aria-controls='nav-profile' aria-selected='false') MY SYSTEM
-                                button#nav-contact-tab.nav-tabs-over-link.nav-link(data-bs-toggle='tab' data-bs-target='#nav-contact' type='button' role='tab' aria-controls='nav-contact' aria-selected='false') MY COMMISION
+                        nav.w-100
+                            .nav-scroll-container
+                                #nav-tab.nav.nav-tabs.nav-tabs-over.flex-nowrap(role='tablist')
+                                    button#nav-home-tab.nav-tabs-over-link.nav-link.active.flex-shrink-0(data-bs-toggle='tab' data-bs-target='#nav-home' type='button' role='tab' aria-controls='nav-home' aria-selected='true') MY VALIVATOR
+                                    button#nav-profile-tab.nav-tabs-over-link.nav-link.flex-shrink-0(data-bs-toggle='tab' data-bs-target='#nav-profile' type='button' role='tab' aria-controls='nav-profile' aria-selected='false') MY SYSTEM
+                                    button#nav-contact-tab.nav-tabs-over-link.nav-link.flex-shrink-0(data-bs-toggle='tab' data-bs-target='#nav-contact' type='button' role='tab' aria-controls='nav-contact' aria-selected='false') MY COMMISION
     
                     #nav-tabContent.tab-content
                         #nav-home.tab-pane.fade.show.active(role='tabpanel' aria-labelledby='nav-home-tab' tabindex='0') 
-                            row.d-flex.justify-content-center.align-items-center
-                                .col-lg-6
+                            row
+                                .col-lg-6.col-md-6.col-sm-12.pt-3
                                     //- Hold Details Card with Circular Header
                                     .hold-card-container
                                         .hold-card
@@ -81,7 +82,7 @@ block content
 
                                                 .hold-action
                                                     button.re-hold-btn RE-HOLD
-                                .col-lg-6
+                                .col-lg-6.col-md-6.col-sm-12.pt-3
                                     //- Hold Details Card with Circular Header
                                     .hold-card-container
                                         .hold-card
@@ -135,9 +136,9 @@ block content
     
                         #nav-profile.tab-pane.fade(role='tabpanel' aria-labelledby='nav-profile-tab' tabindex='0') 
                             .row 
-                                .col-lg-8.col-md-10.mx-auto  
+                                .col-lg-10.col-md-10.mx-auto  
                                     .table-responsive
-                                            table.table.table-bordered.table-hover.text-center.align-middle.table-custom
+                                        table.table.table-bordered.table-hover.text-center.align-middle.table-custom
                                                 thead.table-light
                                                     tr
                                                         th WALLET
@@ -164,7 +165,7 @@ block content
                         
                         #nav-contact.tab-pane.fade(role='tabpanel' aria-labelledby='nav-contact-tab' tabindex='0') 
                             .row 
-                                .col-lg-8.col-md-10.mx-auto  
+                                .col-lg-10.col-md-10.mx-auto  
                                     .wallet-table-container
                                         .table-responsive
                                             table.table.table-bordered.table-hover.text-center.align-middle.table-custom

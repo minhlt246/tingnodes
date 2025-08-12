@@ -249,6 +249,7 @@ header{
 
       @include sm {
         justify-content: start;
+        width: 100%;
       }
 
       .nav-link {
@@ -256,7 +257,8 @@ header{
         font-size: 14px;
         @include sm {
           width: 100%;
-          font-size: 20px;
+            font-size: 20px;
+            padding: 12px 0;
         }
         &:hover {
           color: #47E6FF;

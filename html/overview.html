@@ -43,6 +43,7 @@
             </div>
             <button class="nav-link btn btn-wallet me-3 px-3" href="javascript:void(0)">Connect Wallet</button>
           </div>
+          <button class="navbar-toggler text-black border-0 pe-0" type="button" data-bs-toggle="offcanvas" data-bs-target="#menu" aria-controls="offcanvasNavbar" aria-label="Toggle navigation"><i class="fa-solid fa-bars fa-2x"></i></button>
         </div>
       </nav>
     </header>
@@ -74,18 +75,20 @@
           <div class="container">
             <div class="row">
               <div class="d-flex justify-content-center align-items-center my-5">
-                <nav>
-                  <div class="nav nav-tabs nav-tabs-over" id="nav-tab" role="tablist">
-                    <button class="nav-tabs-over-link nav-link active" id="nav-home-tab" data-bs-toggle="tab" data-bs-target="#nav-home" type="button" role="tab" aria-controls="nav-home" aria-selected="true">MY VALIVATOR</button>
-                    <button class="nav-tabs-over-link nav-link" id="nav-profile-tab" data-bs-toggle="tab" data-bs-target="#nav-profile" type="button" role="tab" aria-controls="nav-profile" aria-selected="false">MY SYSTEM</button>
-                    <button class="nav-tabs-over-link nav-link" id="nav-contact-tab" data-bs-toggle="tab" data-bs-target="#nav-contact" type="button" role="tab" aria-controls="nav-contact" aria-selected="false">MY COMMISION</button>
+                <nav class="w-100">
+                  <div class="nav-scroll-container">
+                    <div class="nav nav-tabs nav-tabs-over flex-nowrap" id="nav-tab" role="tablist">
+                      <button class="nav-tabs-over-link nav-link active flex-shrink-0" id="nav-home-tab" data-bs-toggle="tab" data-bs-target="#nav-home" type="button" role="tab" aria-controls="nav-home" aria-selected="true">MY VALIVATOR</button>
+                      <button class="nav-tabs-over-link nav-link flex-shrink-0" id="nav-profile-tab" data-bs-toggle="tab" data-bs-target="#nav-profile" type="button" role="tab" aria-controls="nav-profile" aria-selected="false">MY SYSTEM</button>
+                      <button class="nav-tabs-over-link nav-link flex-shrink-0" id="nav-contact-tab" data-bs-toggle="tab" data-bs-target="#nav-contact" type="button" role="tab" aria-controls="nav-contact" aria-selected="false">MY COMMISION</button>
+                    </div>
                   </div>
                 </nav>
               </div>
               <div class="tab-content" id="nav-tabContent">
                 <div class="tab-pane fade show active" id="nav-home" role="tabpanel" aria-labelledby="nav-home-tab" tabindex="0"> 
-                  <row class="d-flex justify-content-center align-items-center">
-                    <div class="col-lg-6">
+                  <row>
+                    <div class="col-lg-6 col-md-6 col-sm-12 pt-3">
                       <div class="hold-card-container">
                         <div class="hold-card">
                           <div class="hold-card-header">
@@ -135,7 +138,7 @@
                         </div>
                       </div>
                     </div>
-                    <div class="col-lg-6">
+                    <div class="col-lg-6 col-md-6 col-sm-12 pt-3">
                       <div class="hold-card-container">
                         <div class="hold-card">
                           <div class="hold-card-header">
@@ -189,7 +192,7 @@
                 </div>
                 <div class="tab-pane fade" id="nav-profile" role="tabpanel" aria-labelledby="nav-profile-tab" tabindex="0"> 
                   <div class="row"> 
-                    <div class="col-lg-8 col-md-10 mx-auto"> 
+                    <div class="col-lg-10 col-md-10 mx-auto"> 
                       <div class="table-responsive">
                         <table class="table table-bordered table-hover text-center align-middle table-custom">
                           <thead class="table-light">
@@ -228,7 +231,7 @@
                 </div>
                 <div class="tab-pane fade" id="nav-contact" role="tabpanel" aria-labelledby="nav-contact-tab" tabindex="0"> 
                   <div class="row"> 
-                    <div class="col-lg-8 col-md-10 mx-auto"> 
+                    <div class="col-lg-10 col-md-10 mx-auto"> 
                       <div class="wallet-table-container">
                         <div class="table-responsive">
                           <table class="table table-bordered table-hover text-center align-middle table-custom">
