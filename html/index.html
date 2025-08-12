@@ -1,0 +1,196 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta http-equiv="X-UA-Compatible" content="IE=Edge">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="keywords" content="">
+    <meta name="description" content="">
+    <title>TingNode</title>
+    <link rel="icon" href="./client/images/toncapy.png" type="image/gif" sizes="16x16">
+    <!-- main css-->
+    <link rel="stylesheet" href="client/css/bootstrap.min.css">
+    <link rel="stylesheet" href="client/css/all.min.css">
+    <link rel="stylesheet" href="client/css/hover-min.css">
+    <link rel="stylesheet" href="client/css/flag-icons.min.css">
+    <link rel="stylesheet" href="client/css/style.css">
+    <link rel="stylesheet" href="client/slick/slick.css">
+    <link rel="stylesheet" href="client/fonts/fontstyle.css">
+  </head>
+  <body>
+    <header>
+      <nav class="navbar navbar-expand-lg py-0">
+        <div class="container d-flex justify-content-between my-2"><a class="navbar-brand" href="javascript:void(0)"><img class="img-logo" src="client/images/logo.png" alt=""></a>
+          <div class="offcanvas offcanvas-start" id="menu" tabindex="-1" aria-labelledby="offcanvasNavbarLabel">
+            <div class="offcanvas-header">
+              <h5 class="offcanvas-title"><img class="img-logo" src="client/images/logo.png" alt=""></h5>
+              <button class="btn p-0 border-0 text-highlight" type="button" data-bs-dismiss="offcanvas" aria-label="Close"><i class="fa-solid fa-xmark fa-3x"></i></button>
+            </div>
+            <div class="offcanvas-body">
+              <ul class="navbar-nav ms-auto ps-3 py-3">
+                <li class="nav-item" data-bs-dismiss="offcanvas"><a class="nav-link me-lg-3 active" href="index.html">Dashboard</a></li>
+                <li class="nav-item" data-bs-dismiss="offcanvas"><a class="nav-link me-lg-3" href="">Validator</a></li>
+                <li class="nav-item" data-bs-dismiss="offcanvas"><a class="nav-link me-lg-3" href="overview.html">My Overview</a></li>
+              </ul>
+            </div>
+          </div>
+          <div class="d-flex align-items-center gap-2 ms-auto">
+            <div class="dropdown flag-icon"><a class="nav-link dropdown-toggle me-lg-3 fs-4" href="javascript:void(0)" role="button" data-bs-toggle="dropdown" aria-expanded="false"><span class="fi fi-gb flag-circle"></span></a>
+              <ul class="dropdown-menu dropdown-menu-end">
+                <li><a class="dropdown-item" href="javascript:void(0)"><span class="fi fi-gb me-3 flag-circle"></span>English</a></li>
+                <li><a class="dropdown-item" href="javascript:void(0)"><span class="fi fi-cn me-3 flag-circle"></span>中文</a></li>
+              </ul>
+            </div>
+            <button class="nav-link btn btn-wallet me-3 px-3" href="javascript:void(0)">Connect Wallet</button>
+          </div>
+        </div>
+      </nav>
+    </header>
+    <section>
+      <div class="modal fade" id="stakeModal" tabindex="-1" aria-labelledby="stakeModalLabel" aria-hidden="true">
+        <div class="modal-dialog modal-dialog-centered">
+          <div class="modal-content">
+            <div class="modal-body">
+              <div class="validator-dashboard">
+                <div class="validator-card">
+                  <div class="validator-header"><img class="validator-icon" src="client/images/t-cap.png" alt="">
+                    <div class="validator-title"><span class="title-text">Validators hold </span><span class="highlight">TCAPY</span></div>
+                  </div>
+                </div>
+              </div>
+              <div class="stake-form">
+                <div class="form-row">
+                  <div class="form-label">MIN Stake</div>
+                  <div class="form-value">15,000 TCAPY</div>
+                </div>
+                <div class="form-row">
+                  <div class="form-label">Balance</div>
+                  <div class="d-flex align-items-center justify-content-between">
+                    <div class="form-value">1,300,000 </div><span>TCAPY</span>
+                  </div>
+                </div>
+                <div class="form-row">
+                  <div class="form-label">Amount</div>
+                  <div class="form-input-group">
+                    <input class="form-control" id="stakeAmount" type="number" placeholder="Enter amount" min="15000" step="1000">
+                    <button class="max-btn">MAX</button>
+                  </div>
+                </div>
+                <div class="form-row">
+                  <div class="form-label">Period</div>
+                  <div class="form-input-group">
+                    <select class="form-control" id="stakePeriod">
+                      <option value="3">3 months</option>
+                      <option value="6">6 months</option>
+                      <option value="12">12 months</option>
+                      <option value="24">24 months</option>
+                    </select>
+                  </div>
+                </div>
+                <div class="form-row">
+                  <div class="form-label">APY</div>
+                  <div class="form-value apy-value">5%</div>
+                </div>
+              </div>
+            </div>
+            <div class="modal-footer">
+              <button class="stake-confirm-btn">STAKE</button>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="home">
+        <div class="container">
+          <div class="row">
+            <div class="col-lg-6 col-md-6 col-sm-12 d-flex justify-content-center align-items-center"><img class="key-icon" src="client/images/tingnode-img.png"></div>
+            <div class="col-lg-6 col-md-6 col-sm-12 d-flex justify-content-center align-items-center"><img class="key-tingnode" src="client/images/tingnode-banner.png"></div>
+          </div>
+        </div>
+      </div>
+      <div class="validators"> 
+        <div class="container">
+          <div class="my-4 d-flex justify-content-center align-items-center validators-title-text"><span class="validators-title-text-v me-2">Validators </span><span class="validators-title-text-t">TINGNODE</span></div>
+          <div class="row pt-5"> 
+            <div class="col-lg-6 col-md-6 col-sm-12 d-flex justify-content-center align-items-center">
+              <div class="validator-dashboard">
+                <div class="validator-card">
+                  <div class="validator-header"><img class="validator-icon" src="client/images/t-cap.png" alt="">
+                    <div class="validator-title"><span class="title-text">Validators hold </span><span class="highlight">TCAPY</span></div>
+                  </div>
+                  <div class="validator-metrics">
+                    <div class="metric-item">
+                      <div class="metric-label">In Circulation</div>
+                      <div class="metric-value circulation">100,000,000</div>
+                    </div>
+                    <div class="metric-item">
+                      <div class="metric-label">Staking TONCAPY</div>
+                      <div class="metric-value">15,000</div>
+                    </div>
+                    <div class="metric-item">
+                      <div class="metric-label">APR</div>
+                      <div class="metric-value apr">0.2% - 0.68% / Day</div>
+                    </div>
+                    <div class="metric-item">
+                      <div class="metric-label">Holders</div>
+                      <div class="metric-value">15,000</div>
+                    </div>
+                    <div class="validator-action">
+                      <button class="stake-button" data-bs-toggle="modal" data-bs-target="#stakeModal">STAKE  </button>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="col-lg-6 col-md-6 col-sm-12 d-flex justify-content-center align-items-center">
+              <div class="validator-dashboard">
+                <div class="validator-card">
+                  <div class="validator-header"><img class="validator-icon" src="client/images/t-cap.png" alt="">
+                    <div class="validator-title"><span class="title-text">Validators hold </span><span class="highlight">TCAPY</span></div>
+                  </div>
+                  <div class="validator-metrics">
+                    <div class="metric-item">
+                      <div class="metric-label">In Circulation</div>
+                      <div class="metric-value circulation">100,000,000</div>
+                    </div>
+                    <div class="metric-item">
+                      <div class="metric-label">Staking TONCAPY</div>
+                      <div class="metric-value">15,000</div>
+                    </div>
+                    <div class="metric-item">
+                      <div class="metric-label">APR</div>
+                      <div class="metric-value apr">0.2% - 0.68% / Day</div>
+                    </div>
+                    <div class="metric-item">
+                      <div class="metric-label">Holders</div>
+                      <div class="metric-value">15,000</div>
+                    </div>
+                    <div class="validator-action">
+                      <button class="stake-button" data-bs-toggle="modal" data-bs-target="#stakeModal">STAKE</button>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+    <!-- main js-->
+    <script src="client/js/all.min.js"></script>
+    <script src="client/js/jquery.min.js"></script>
+    <script src="client/js/bootstrap.bundle.min.js"></script>
+    <!--script(src='client/js/moment.js')-->
+    <script src="client/slick/slick.js"></script>
+    <script src="client/js/main.js"></script>
+    <script src="client/js/validate.js"></script>
+    <script>
+      $(function () {
+          if ($(window).width() > 769) {
+              $('.menu .dropdown > a').click(function () {
+                  location.href = this.href;
+              });
+          }
+      })
+    </script>
+  </body>
+</html>
