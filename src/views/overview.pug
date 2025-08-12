@@ -1,0 +1,194 @@
+extends _layouts/master
+
+block content
+    .overview
+        .overview-sub-section
+            .container
+                .row
+                    .col-12
+                        .d-flex.justify-content-center.align-items-center.flex-column
+                            img.overview-bng(src="./client/images/overview.png" alt="")
+                            .banner-section
+                                .banner-title
+                                    span.title-gradient AFFIRM THE LEADING ROLE IN THE SYSTEM
+                                .banner-subtitle
+                                    p.subtitle-text Introduce it today and join forces to develop the decentralized STAKING system
+
+                                .url-section
+                                    .url-input-container
+                                        input.url-input(type="text" value="https://www.google.com.vn/?hl=vijakldiwiklnauo", readonly)
+                                        button.copy-btn COPY
+        .overview-section
+            .container
+                .row
+                    .d-flex.justify-content-center.align-items-center.my-5
+                        nav
+                            #nav-tab.nav.nav-tabs.nav-tabs-over(role='tablist')
+                                button#nav-home-tab.nav-tabs-over-link.nav-link.active(data-bs-toggle='tab' data-bs-target='#nav-home' type='button' role='tab' aria-controls='nav-home' aria-selected='true') MY VALIVATOR
+                                button#nav-profile-tab.nav-tabs-over-link.nav-link(data-bs-toggle='tab' data-bs-target='#nav-profile' type='button' role='tab' aria-controls='nav-profile' aria-selected='false') MY SYSTEM
+                                button#nav-contact-tab.nav-tabs-over-link.nav-link(data-bs-toggle='tab' data-bs-target='#nav-contact' type='button' role='tab' aria-controls='nav-contact' aria-selected='false') MY COMMISION
+    
+                    #nav-tabContent.tab-content
+                        #nav-home.tab-pane.fade.show.active(role='tabpanel' aria-labelledby='nav-home-tab' tabindex='0') 
+                            row.d-flex.justify-content-center.align-items-center
+                                .col-lg-6
+                                    //- Hold Details Card with Circular Header
+                                    .hold-card-container
+                                        .hold-card
+                                            //- Circular Header with Capybara
+                                            .hold-card-header
+                                                .circular-header
+                                                    .capybara-head
+                                                        img.capybara-head-img(src="./client/images/t-cap.png" alt="Capybara Head")
+                                                           
+                                                        
+
+                                            //- Card Content
+                                            .hold-card-content
+                                                .hold-metrics
+                                                    .metric-row
+                                                        .metric-label My Hold
+                                                        .metric-value 5 TCAPY
+
+                                                    .metric-row
+                                                        .metric-label Period
+                                                        .metric-value 3 months
+
+                                                    .metric-row
+                                                        .metric-label Max Out
+                                                        .metric-value 20 TCAPY
+
+
+                                                    .metric-row
+                                                        .metric-label Reward
+                                                        .metric-value 1 TCAPY
+
+                                                    .metric-row
+                                                        .metric-label Commission
+                                                        .metric-value 5 TCAPY
+
+                                                    .metric-row
+                                                        .metric-label Date Creat
+                                                        .metric-value.date-value 08/08/2025
+
+                                                    .metric-row
+                                                        .metric-label Exp
+                                                        .metric-value.date-value 08/08/2026
+
+                                                    .metric-row
+                                                        .metric-label Total System Hold
+                                                        .metric-value 8 TCAPY
+
+                                                .hold-action
+                                                    button.re-hold-btn RE-HOLD
+                                .col-lg-6
+                                    //- Hold Details Card with Circular Header
+                                    .hold-card-container
+                                        .hold-card
+                                            //- Circular Header with Capybara
+                                            .hold-card-header
+                                                .circular-header
+                                                    .capybara-head
+                                                        img.capybara-head-img(src="./client/images/t-cap.png" alt="Capybara Head")
+                                                            
+                                                       
+
+                                            //- Card Content
+                                            .hold-card-content
+                                                .hold-metrics
+                                                    .metric-row
+                                                        .metric-label My Hold
+                                                        .metric-value 5 TCAPY
+
+                                                    .metric-row
+                                                        .metric-label Period
+                                                        .metric-value 3 months
+
+                                                    .metric-row
+                                                        .metric-label Max Out
+                                                        .metric-value 20 TCAPY
+
+                                                    
+
+                                                    .metric-row
+                                                        .metric-label Reward
+                                                        .metric-value 1 TCAPY
+
+                                                    .metric-row
+                                                        .metric-label Commission
+                                                        .metric-value 5 TCAPY
+
+                                                    .metric-row
+                                                        .metric-label Date Creat
+                                                        .metric-value.date-value 08/08/2025
+
+                                                    .metric-row
+                                                        .metric-label Exp
+                                                        .metric-value.date-value 08/08/2026
+
+                                                    .metric-row
+                                                        .metric-label Total System Hold
+                                                        .metric-value 8 TCAPY
+
+                                                .hold-action
+                                                    button.re-hold-btn RE-HOLD                    
+    
+                        #nav-profile.tab-pane.fade(role='tabpanel' aria-labelledby='nav-profile-tab' tabindex='0') 
+                            .row 
+                                .col-lg-8.col-md-10.mx-auto  
+                                    .table-responsive
+                                            table.table.table-bordered.table-hover.text-center.align-middle.table-custom
+                                                thead.table-light
+                                                    tr
+                                                        th WALLET
+                                                        th HOLD
+                                                        th FLOOR
+                                                       
+                                                tbody
+                                                    tr
+                                                        td 1234sv vc56678910khg
+                                                        td 10 TCAPY
+                                                        td #1
+                                                    tr
+                                                        td 1234sv vc56678910khg
+                                                        td 10 TCAPY
+                                                        td #1
+                                                    tr
+                                                        td 1234sv vc56678910khg
+                                                        td 10 TCAPY
+                                                        td #1
+                                                    tr
+                                                        td 1234sv vc56678910khg
+                                                        td 10 TCAPY
+                                                        td #1    
+                        
+                        #nav-contact.tab-pane.fade(role='tabpanel' aria-labelledby='nav-contact-tab' tabindex='0') 
+                            .row 
+                                .col-lg-8.col-md-10.mx-auto  
+                                    .wallet-table-container
+                                        .table-responsive
+                                            table.table.table-bordered.table-hover.text-center.align-middle.table-custom
+                                                thead.table-light
+                                                    tr
+                                                        th NO
+                                                        th AMOUNT
+                                                        th NOTE
+                                                        th DATE
+                                                tbody
+                                                    tbody
+                                                        tr
+                                                            td 01
+                                                            td 10 TCAPY
+                                                            td Commission
+                                                            td 08/08/2025
+                                                        tr
+                                                            td 02
+                                                            td 10 TCAPY
+                                                            td Commission
+                                                            td 09/08/2025
+                                                        tr
+                                                            td 03
+                                                            td 10 TCAPY
+                                                            td Commission
+                                                            td 10/08/2025
+                        

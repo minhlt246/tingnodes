@@ -1,0 +1,29 @@
+{
+  "name": "game-fomo",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "pug-scss": "sass ./src/public/scss/style.scss ./html/client/css/style.css --style=compressed && pug src/views -o ./html -P",
+    "public-file": "cp -R -f ./src/public/* ./html/client",
+    "build": "npm run pug-scss && npm run public-file",
+    "watch-scss": "sass --watch ./src/public/scss/style.scss ./html/client/css/style.css",
+    "watch-pug": "pug -w ./src/views -o ./html -P"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/minhlt246/tingnodes.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/minhlt246/tingnodes/issues"
+  },
+  "homepage": "https://github.com/minhlt246/tingnodes#readme",
+  "dependencies": {
+    "animate.css": "^4.1.1",
+    "pug-cli": "^1.0.0-alpha6",
+    "sass": "^1.77.6"
+  }
+}

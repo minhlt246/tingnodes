@@ -1,0 +1,50 @@
+doctype html
+html
+    head
+        meta(http-equiv='X-UA-Compatible' content='IE=Edge')
+        meta(charset='UTF-8')
+        meta(name='viewport' content='width=device-width, initial-scale=1')
+        meta(name='keywords' content='')
+        meta(name='description' content='')
+        title TingNode
+        link(rel='icon' href='./client/images/toncapy.png' type='image/gif' sizes='16x16')
+        // main css
+        link(rel='stylesheet' href='client/css/bootstrap.min.css')
+        link(rel='stylesheet' href='client/css/all.min.css')
+        link(rel='stylesheet' href='client/css/hover-min.css')
+        link(rel='stylesheet' href='client/css/flag-icons.min.css')
+        link(rel='stylesheet' href='client/css/style.css')
+        link(rel='stylesheet' href='client/slick/slick.css')
+        link(rel='stylesheet' href='client/fonts/fontstyle.css')
+
+
+    body
+        include ../_partials/header
+        section
+            block content
+        include ../_partials/menu
+        // main js
+        script(src='client/js/all.min.js')
+        script(src='client/js/jquery.min.js')
+        script(src='client/js/bootstrap.bundle.min.js')
+        //script(src='client/js/moment.js')
+        script(src='client/slick/slick.js')
+        script(src='client/js/main.js')
+        script(src='client/js/validate.js')
+
+        script.
+
+            $(function () {
+                if ($(window).width() > 769) {
+                    $('.menu .dropdown > a').click(function () {
+                        location.href = this.href;
+                    });
+                }
+            })
+
+
+
+
+
+
+

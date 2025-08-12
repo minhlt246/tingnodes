@@ -1,0 +1,37 @@
+header
+    nav.navbar.navbar-expand-lg.py-0
+        .container.d-flex.justify-content-between.my-2
+            a.navbar-brand(href='javascript:void(0)')
+                img.img-logo(src="client/images/logo.png" alt="")
+            #menu.offcanvas.offcanvas-start(tabindex='-1' aria-labelledby='offcanvasNavbarLabel')
+                .offcanvas-header
+                    h5.offcanvas-title
+                        img.img-logo(src="client/images/logo.png" alt="")
+                    button.btn.p-0.border-0.text-highlight(type='button' data-bs-dismiss='offcanvas' aria-label='Close')
+                        i.fa-solid.fa-xmark.fa-3x
+                .offcanvas-body
+                    ul.navbar-nav.ms-auto.ps-3.py-3
+                        li.nav-item(data-bs-dismiss='offcanvas')
+                            a.nav-link.me-lg-3.active(href='index.html') Dashboard
+                        li.nav-item(data-bs-dismiss='offcanvas')
+                            a.nav-link.me-lg-3(href='') Validator
+                        li.nav-item(data-bs-dismiss='offcanvas')
+                            a.nav-link.me-lg-3(href='overview.html') My Overview
+
+            .d-flex.align-items-center.gap-2.ms-auto
+                .dropdown.flag-icon
+                    a.nav-link.dropdown-toggle.me-lg-3.fs-4(href='javascript:void(0)' role='button' data-bs-toggle='dropdown' aria-expanded='false')
+                        span.fi.fi-gb.flag-circle
+                    ul.dropdown-menu.dropdown-menu-end
+                        li
+                            a.dropdown-item(href='javascript:void(0)')
+                                span.fi.fi-gb.me-3.flag-circle
+                                | English
+                        li
+                            a.dropdown-item(href='javascript:void(0)')
+                                span.fi.fi-cn.me-3.flag-circle
+                                | 中文
+                        
+
+                button.nav-link.btn.btn-wallet.me-3.px-3(href='javascript:void(0)' ) Connect Wallet
+

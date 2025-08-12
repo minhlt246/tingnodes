@@ -1,0 +1,297 @@
+
+@use "./breakpoint.scss" as *;
+@use "./galaxy.scss" as galaxy;
+.overview{
+    .overview-sub-section{
+        background: linear-gradient(0deg,rgba(0, 16, 16, 1) 0%, rgba(0, 62, 62, 1) 100%);
+        width: 100%;
+        .overview-bng{
+            width: 100%;
+            height: auto;
+            object-position: center;
+            margin-top: 100px;
+        }
+        .banner-section{
+            text-align: center;
+            padding: 60px 20px;
+           
+            .banner-title {
+                margin-bottom: 20px;
+                
+                .title-gradient {
+                    font-size: 3rem;
+                    font-weight: bold;
+                    text-transform: uppercase;
+                    background: linear-gradient(90deg, #FFD700 0%, #00FF00 50%, #00FFFF 100%);
+                    -webkit-background-clip: text;
+                    -webkit-text-fill-color: transparent;
+                    background-clip: text;
+                    display: inline-block;
+                    position: relative;
+                    
+                    
+                }
+            }
+            
+            .banner-subtitle {
+                margin-bottom: 40px;
+                
+                .subtitle-text {
+                    color: #BCC8C8;
+                    font-size: 1.2rem;
+                    margin: 0;
+                    opacity: 0.9;
+                }
+            }
+            
+            .url-section {
+                display: flex;
+                justify-content: center;
+                align-items: center;
+                gap: 15px;
+                width: 800px;
+                margin: 0 auto;
+                
+                .url-input-container {
+                    display: flex;
+                    align-items: center;
+                    background: white;
+                    border-radius: 999px;
+                    flex: 1;
+                    .url-input {
+                        flex: 1;
+                        border: none;
+                        outline: none;
+                        padding: 15px 20px;
+                        font-size: 1rem;
+                        background: transparent;
+                        color: #333;
+                        
+                        &::placeholder {
+                            color: #999;
+                        }
+                    }
+                }
+                
+                .copy-btn {
+                    background: linear-gradient(135deg, #00CED1, #20B2AA);
+                    color: white;
+                    border: none;
+                    border-radius: 999px;
+                    padding: 20px;
+                    text-transform: uppercase;
+                    cursor: pointer;
+                    transition: all 0.3s ease;
+                    white-space: nowrap;
+                    width: 100px;
+                    &:hover {
+                        transform: translateY(-2px);
+                        box-shadow: 0 5px 15px rgba(0, 206, 209, 0.4);
+                    }
+                    
+                    &:active {
+                        transform: translateY(0);
+                    }
+                }
+            }
+        }
+    }
+    .overview-section{
+        background: #DCFFFF;
+        width: 100%;
+        height: auto;
+        min-height: 100vh;
+          // Nav tab custom style
+  .nav-tabs-over {
+    display: flex;
+    justify-content: center;
+    gap: 60px;
+    border-bottom: none;
+    margin-bottom: 40px;
+    background: transparent;
+    .nav-link {
+      font-size: 14px;
+      font-weight: 300;
+      color: #5c6c6c;
+      background: transparent;
+      border: none;
+      border-radius: 40px;
+      padding: 10px 20px;
+      transition: all 0.2s;
+      outline: none;
+      &.active, &:hover, &:focus {
+        color: #009393;
+        background: transparent;
+        border: 2px solid #009393;
+        box-shadow: 0 2px 12px rgba(0,151,157,0.08);
+        font-weight: bold;
+      }
+    }
+  }
+        .tab-content {
+            .tab-pane {
+                display: none;
+                opacity: 0;
+                transition: opacity 0.3s;
+                &.show.active {
+                display: block;
+                opacity: 1;
+                }
+                .row {
+                margin-top: 40px;
+                }
+            }
+        }
+
+// Card style cho tab Home
+.hold-card-container {
+  display: flex;
+  justify-content: center;
+  align-items: flex-start;
+  gap: 32px;
+  margin-bottom: 32px;
+  flex-wrap: wrap;
+}
+.hold-card {
+  background: #2A6A6A;
+  border-radius: 25px;
+  padding: 60px 40px 40px 40px;
+  max-width: 450px;
+  width: 100%;
+  box-shadow: 0 15px 35px rgba(42, 106, 106, 0.3);
+  position: relative;
+  margin-top: 40px;
+  .hold-card-header {
+    position: absolute;
+    top: -80px;
+    left: 50%;
+    transform: translateX(-50%);
+    z-index: 10;  
+    .circular-header {
+     .capybara-head{
+        .capybara-head-img{
+          width: 150px;
+        }
+        
+     }
+    }
+  }
+  .hold-card-content {
+    .hold-metrics {
+      .metric-row {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        padding: 14px 0;
+        border-bottom: 1px solid rgba(255,255,255,0.1);
+        &:last-child { border-bottom: none; }
+        .metric-label { color: #E0E0E0; font-size: 14px;  flex: 1; }
+        .metric-value { color: #fff; font-size: 14px; text-align: right; flex: 1;
+          &.date-value { color: #00FFFF;  font-size: 14px; }
+        }
+      }
+      
+    }
+    .hold-action {
+      margin-top: 35px;
+      text-align: center;
+      .re-hold-btn {
+       background: #DC9C00;
+        background: linear-gradient(90deg,rgba(220, 156, 0, 1) 0%, rgba(0, 174, 174, 1) 100%);
+        border: none;
+        border-radius: 25px;
+        padding: 16px 40px;
+        font-size: 14px;
+       
+        color: #fff;
+        text-transform: uppercase;
+        letter-spacing: 1px;
+        cursor: pointer;
+        transition: all 0.3s;
+       
+        min-width: 180px;
+        &:hover {
+          transform: translateY(-2px);
+          
+        }
+        &:active {
+          transform: translateY(0);
+          box-shadow: 0 4px 12px rgba(160,192,48,0.3);
+        }
+        &:focus {
+          outline: none;
+          box-shadow: 0 0 0 3px rgba(160,192,48,0.3);
+        }
+      }
+    }
+  }
+}
+
+
+.table-responsive {
+  background: transparent;
+  overflow: hidden;
+  
+  .table-custom {
+    margin-bottom: 0;
+    background: transparent;
+    .table-light{
+      border-top: none;
+    }
+    thead {
+      background: transparent;
+      border-bottom: 2px solid #009393;
+      tr{
+        border: none;
+        th {
+          background: transparent !important;
+          border: none;
+          padding: 20px 15px;
+          font-weight: 700;
+          font-size: 16px;
+          color: #495057;
+          text-transform: uppercase;
+          letter-spacing: 0.5px;
+          vertical-align: middle;
+        }
+      }
+    }
+    tbody {
+      background: transparent;
+      tr {
+        background: transparent !important;
+        border-bottom: 1px solid #009393;
+        transition: all 0.3s;
+        border-top: none;
+        
+        &:hover { background: rgba(255,255,255,0.05) !important; }
+        td, th {
+          background: transparent !important;
+          border: none;
+          padding: 18px 15px;
+          font-size: 15px;
+          color: #495057;
+          font-weight: 500;
+          vertical-align: middle;
+        }
+      }
+    }
+  }
+}
+
+// Responsive
+@media (max-width: 992px) {
+  .hold-card-container { flex-direction: column; align-items: center; }
+  .hold-card { max-width: 100%; }
+}
+@media (max-width: 768px) {
+  .hold-card { padding: 40px 15px 30px 15px; }
+  .table-responsive { border-radius: 10px; }
+  .table-custom {
+    thead th { padding: 15px 10px; font-size: 14px; }
+    tbody tr td { padding: 12px 10px; font-size: 13px; }
+  }
+}
+                    
+    }
+}
