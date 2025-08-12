@@ -230,7 +230,12 @@ header{
   background: #DCFFFF;
   .img-logo{
     height:auto;
-    width: 40%;
+    @include lg {
+      width: 160px;
+    }
+    @include sm {
+      width: 120px;
+    }
   }
   .btn-wallet{
     background: #009393;

@@ -733,7 +733,16 @@ header {
 }
 header .img-logo {
   height: auto;
-  width: 40%;
+}
+@media (min-width: 1024px) and (max-width: 1366px) {
+  header .img-logo {
+    width: 160px;
+  }
+}
+@media (min-width: 320px) and (max-width: 479px) {
+  header .img-logo {
+    width: 120px;
+  }
 }
 header .btn-wallet {
   background: #009393;
