@@ -10,6 +10,9 @@
             height: auto;
             object-position: center;
             margin-top: 100px;
+            @include sm {
+              margin-top: 50px;
+            }
         }
         .banner-section{
             text-align: center;
@@ -29,7 +32,10 @@
                     display: inline-block;
                     position: relative;
                     
-                    
+                    @include sm {
+                      font-size: 2rem;
+                      text-align: left;
+                    }
                 }
             }
             
@@ -41,6 +47,12 @@
                     font-size: 1.2rem;
                     margin: 0;
                     opacity: 0.9;
+                    @include sm {
+                      font-size: 1rem;
+                      text-align: left;
+                      line-height: 1,5;
+                      
+                    }
                 }
             }
             
@@ -51,7 +63,9 @@
                 gap: 15px;
                 width: 800px;
                 margin: 0 auto;
-                
+                @include sm {
+                  width: auto;
+                }
                 .url-input-container {
                     display: flex;
                     align-items: center;
@@ -102,6 +116,23 @@
         height: auto;
         min-height: 100vh;
           // Nav tab custom style
+  .nav-scroll-container {
+    width: 100%;
+    overflow-x: auto;
+    overflow-y: hidden;
+    -webkit-overflow-scrolling: touch;
+    scrollbar-width: none; /* Firefox */
+    -ms-overflow-style: none; /* IE and Edge */
+    
+    &::-webkit-scrollbar {
+      display: none; /* Chrome, Safari and Opera */
+    }
+    
+    @include sm {
+      padding-bottom: 5px;
+    }
+  }
+  
   .nav-tabs-over {
     display: flex;
     justify-content: center;
@@ -109,6 +140,12 @@
     border-bottom: none;
     margin-bottom: 40px;
     background: transparent;
+    min-width: max-content;
+    @include sm {
+      gap: 20px;
+      justify-content: flex-start;
+      padding: 0 10px;
+    }
     .nav-link {
       font-size: 14px;
       font-weight: 300;
@@ -125,6 +162,11 @@
         border: 2px solid #009393;
         box-shadow: 0 2px 12px rgba(0,151,157,0.08);
         font-weight: bold;
+      }
+      @include sm {
+        font-size: 12px;
+        padding: 5px 10px;
+        
       }
     }
   }

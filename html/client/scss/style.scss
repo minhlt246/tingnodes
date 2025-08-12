@@ -230,7 +230,12 @@ header{
   background: #DCFFFF;
   .img-logo{
     height:auto;
-    width: 40%;
+    
+      width: 160px;
+    
+    @include sm {
+      width: 105px;
+    }
   }
   .btn-wallet{
     background: #009393;
@@ -249,6 +254,7 @@ header{
 
       @include sm {
         justify-content: start;
+        width: 100%;
       }
 
       .nav-link {
@@ -256,7 +262,8 @@ header{
         font-size: 14px;
         @include sm {
           width: 100%;
-          font-size: 20px;
+            font-size: 20px;
+            padding: 12px 0;
         }
         &:hover {
           color: #47E6FF;
@@ -326,7 +333,7 @@ section{
     padding: 100px 0;
     height: auto;
     .key-icon{
-      width: 100%;
+      width: 70%;
       height: auto;
     }
     .key-tingnode{
@@ -359,7 +366,7 @@ section{
       width: 450px;
       box-shadow: 0 10px 30px rgba(0, 0, 0, 0.3);
       overflow: hidden;
-      height: 500px;
+      height: 450px;
       position: relative;
       }
       .validator-card{
@@ -424,7 +431,7 @@ section{
             .metric-value {
               color: #ffffff;
               font-size: 16px;
-              font-weight: 600;
+              font-weight: 300;
               
               &.circulation {
                 color: #FBB111;
@@ -438,15 +445,15 @@ section{
         }
         
         .validator-action {
-          padding: 20px;
+          padding-top: 20px;
           
           .stake-button {
             width: 100%;
             background: #DC9C00;
             background: linear-gradient(90deg,rgba(220, 156, 0, 1) 0%, rgba(0, 174, 174, 1) 100%);  
             border: none;
-            border-radius: 25px;
-            padding: 15px 30px;
+            border-radius: 999px;
+            padding: 10px 0px;
             color: #ffffff;
             font-size: 16px;
             
@@ -457,10 +464,7 @@ section{
               transform: translateY(-5px);
               
             }
-            
-            &:active {
-              transform: translateY(0);
-            }
+
           }
         }
       

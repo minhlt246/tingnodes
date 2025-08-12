@@ -7,7 +7,7 @@
     <meta name="keywords" content="">
     <meta name="description" content="">
     <title>TingNode</title>
-    <link rel="icon" href="./client/images/toncapy.png" type="image/gif" sizes="16x16">
+    <link rel="icon" href="./client/images/toncapy.png" type="image/gif" sizes="18x18">
     <!-- main css-->
     <link rel="stylesheet" href="client/css/bootstrap.min.css">
     <link rel="stylesheet" href="client/css/all.min.css">
@@ -20,7 +20,7 @@
   <body>
     <header>
       <nav class="navbar navbar-expand-lg py-0">
-        <div class="container d-flex justify-content-between my-2 px-0"><a class="navbar-brand" href="javascript:void(0)"><img class="img-logo" src="client/images/logo.png" alt=""></a>
+        <div class="container d-flex justify-content-between my-2 px-2"><a class="navbar-brand" href="javascript:void(0)"><img class="img-logo" src="client/images/logo.png" alt=""></a>
           <div class="offcanvas offcanvas-start" id="menu" tabindex="-1" aria-labelledby="offcanvasNavbarLabel">
             <div class="offcanvas-header">
               <h5 class="offcanvas-title"><img class="img-logo" src="client/images/logo.png" alt=""></h5>
@@ -36,7 +36,7 @@
           </div>
           <div class="d-flex align-items-center gap-2 ms-auto">
             <div class="dropdown flag-icon"><a class="nav-link dropdown-toggle me-lg-3 fs-4" href="javascript:void(0)" role="button" data-bs-toggle="dropdown" aria-expanded="false"><span class="fi fi-gb flag-circle"></span></a>
-              <ul class="dropdown-menu dropdown-menu-end">
+              <ul class="dropdown-menu dropdown-menu-center mt-3">
                 <li><a class="dropdown-item" href="javascript:void(0)"><span class="fi fi-gb me-3 flag-circle"></span>English</a></li>
                 <li><a class="dropdown-item" href="javascript:void(0)"><span class="fi fi-cn me-3 flag-circle"></span>中文</a></li>
               </ul>
@@ -100,6 +100,58 @@
           </div>
         </div>
       </div>
+      <div class="modal fade" id="stake-t-capy" tabindex="-1" aria-labelledby="stakeModalLabel" aria-hidden="true">
+        <div class="modal-dialog modal-dialog-centered">
+          <div class="modal-content">
+            <div class="modal-body">
+              <div class="validator-dashboard">
+                <div class="validator-card">
+                  <div class="validator-header"><img class="validator-icon" src="client/images/t-cap-1.png" alt="">
+                    <div class="validator-title"><span class="title-text">Validators hold </span><span class="highlight">TCAPY</span></div>
+                  </div>
+                </div>
+              </div>
+              <div class="stake-form">
+                <div class="form-row">
+                  <div class="form-label">MIN Stake</div>
+                  <div class="form-value">15,000 TCAPY</div>
+                </div>
+                <div class="form-row">
+                  <div class="form-label">Balance</div>
+                  <div class="d-flex align-items-center justify-content-between">
+                    <div class="form-value">1,300,000 </div><span>TCAPY</span>
+                  </div>
+                </div>
+                <div class="form-row">
+                  <div class="form-label">Amount</div>
+                  <div class="form-input-group">
+                    <input class="form-control" id="stakeAmount" type="number" placeholder="Enter amount" min="15000" step="1000">
+                    <button class="max-btn">MAX</button>
+                  </div>
+                </div>
+                <div class="form-row">
+                  <div class="form-label">Period</div>
+                  <div class="form-input-group">
+                    <select class="form-control" id="stakePeriod">
+                      <option value="3">3 months</option>
+                      <option value="6">6 months</option>
+                      <option value="12">12 months</option>
+                      <option value="24">24 months</option>
+                    </select>
+                  </div>
+                </div>
+                <div class="form-row">
+                  <div class="form-label">APY</div>
+                  <div class="form-value apy-value">5%</div>
+                </div>
+              </div>
+            </div>
+            <div class="modal-footer">
+              <button class="stake-confirm-btn">STAKE                </button>
+            </div>
+          </div>
+        </div>
+      </div>
       <div class="home">
         <div class="container">
           <div class="row">
@@ -145,7 +197,7 @@
             <div class="col-lg-6 col-md-6 col-sm-12 d-flex justify-content-center align-items-center pt-3">
               <div class="validator-dashboard">
                 <div class="validator-card">
-                  <div class="validator-header"><img class="validator-icon" src="client/images/t-cap.png" alt="">
+                  <div class="validator-header"><img class="validator-icon" src="client/images/t-cap-1.png" alt="">
                     <div class="validator-title"><span class="title-text">Validators hold </span><span class="highlight">TCAPY</span></div>
                   </div>
                   <div class="validator-metrics">
@@ -166,7 +218,7 @@
                       <div class="metric-value">15,000</div>
                     </div>
                     <div class="validator-action">
-                      <button class="stake-button" data-bs-toggle="modal" data-bs-target="#stakeModal">STAKE</button>
+                      <button class="stake-button" data-bs-toggle="modal" data-bs-target="#stake-t-capy">STAKE</button>
                     </div>
                   </div>
                 </div>

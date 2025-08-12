@@ -733,15 +733,11 @@ header {
 }
 header .img-logo {
   height: auto;
-}
-@media (min-width: 1024px) and (max-width: 1366px) {
-  header .img-logo {
-    width: 160px;
-  }
+  width: 160px;
 }
 @media (min-width: 320px) and (max-width: 479px) {
   header .img-logo {
-    width: 120px;
+    width: 105px;
   }
 }
 header .btn-wallet {
@@ -837,7 +833,7 @@ section .home {
   height: auto;
 }
 section .home .key-icon {
-  width: 100%;
+  width: 70%;
   height: auto;
 }
 section .home .key-tingnode {
@@ -870,7 +866,7 @@ section .validators .validator-dashboard {
   width: 450px;
   box-shadow: 0 10px 30px rgba(0, 0, 0, 0.3);
   overflow: hidden;
-  height: 500px;
+  height: 450px;
   position: relative;
 }
 section .validators .validator-card {
@@ -929,7 +925,7 @@ section .validators .validator-metrics .metric-item .metric-label {
 section .validators .validator-metrics .metric-item .metric-value {
   color: #ffffff;
   font-size: 16px;
-  font-weight: 600;
+  font-weight: 300;
 }
 section .validators .validator-metrics .metric-item .metric-value.circulation {
   color: #FBB111;
@@ -938,15 +934,15 @@ section .validators .validator-metrics .metric-item .metric-value.apr {
   color: #FBB111;
 }
 section .validators .validator-action {
-  padding: 20px;
+  padding-top: 20px;
 }
 section .validators .validator-action .stake-button {
   width: 100%;
   background: #DC9C00;
   background: linear-gradient(90deg, rgb(220, 156, 0) 0%, rgb(0, 174, 174) 100%);
   border: none;
-  border-radius: 25px;
-  padding: 15px 30px;
+  border-radius: 999px;
+  padding: 10px 0px;
   color: #ffffff;
   font-size: 16px;
   text-transform: uppercase;
@@ -955,9 +951,6 @@ section .validators .validator-action .stake-button {
 }
 section .validators .validator-action .stake-button:hover {
   transform: translateY(-5px);
-}
-section .validators .validator-action .stake-button:active {
-  transform: translateY(0);
 }
 
 #stakeModal {
@@ -1112,6 +1105,162 @@ section .validators .validator-action .stake-button:active {
   flex: 1;
 }
 #stakeModal .stake-form .form-row .form-select:focus {
+  outline: none;
+  box-shadow: 0 0 0 2px rgba(71, 230, 255, 0.3);
+}
+
+#stake-t-capy {
+  background-size: 320px 320px;
+  border: none;
+  border-radius: 20px;
+  color: #ffffff;
+  align-items: center;
+  justify-content: center;
+  display: flex;
+  overflow: hidden;
+  height: auto;
+  min-height: 450px;
+}
+#stake-t-capy .modal-dialog .modal-content {
+  background: linear-gradient(180deg, #004D4D 0%, #003E3E 100%);
+  height: 100%;
+}
+#stake-t-capy .modal-dialog .modal-content::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background: url("../images/bannner-modal.png") center center no-repeat;
+  background-size: 320px 320px;
+  opacity: 0.18;
+  pointer-events: none;
+  z-index: 0;
+}
+#stake-t-capy .modal-dialog .modal-content > * {
+  z-index: 1;
+}
+#stake-t-capy .modal-body {
+  padding: 0 30px 25px;
+  position: relative;
+  z-index: 2;
+  padding-top: 100px;
+}
+#stake-t-capy .validator-dashboard {
+  margin-bottom: 20px;
+  height: 50px;
+}
+#stake-t-capy .validator-dashboard .validator-card {
+  padding: 20px;
+  position: absolute;
+  top: 20%;
+  left: 0;
+  right: 0;
+  height: 60px;
+  background: #002D2D;
+  transform: translateY(-50%);
+  z-index: 1;
+}
+#stake-t-capy .validator-dashboard .validator-header {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-bottom: 20px;
+  height: 100%;
+}
+#stake-t-capy .validator-dashboard .validator-header .validator-icon {
+  width: 110px;
+  height: 110px;
+}
+#stake-t-capy .validator-dashboard .validator-header .validator-title {
+  margin-left: 25px;
+}
+#stake-t-capy .validator-dashboard .validator-header .validator-title .title-text {
+  color: #ffffff;
+  font-size: 18px;
+  font-weight: 500;
+  margin: 0;
+}
+#stake-t-capy .validator-dashboard .validator-header .validator-title .highlight {
+  color: #47E6FF;
+  font-weight: bold;
+  margin-right: 20px;
+}
+#stake-t-capy .stake-form {
+  padding: 0;
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+#stake-t-capy .stake-form .form-row {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 15px 0;
+}
+#stake-t-capy .stake-form .form-row .form-label {
+  color: #ffffff;
+  font-size: 18px;
+  font-weight: 300;
+}
+#stake-t-capy .stake-form .form-row .form-value {
+  color: #ffffff;
+  font-size: 18px;
+  font-weight: 300;
+}
+#stake-t-capy .stake-form .form-row .form-value.apy-value {
+  color: #FBB111;
+  font-weight: bold;
+}
+#stake-t-capy .stake-form .form-row .form-input-group {
+  display: flex;
+  gap: 10px;
+  flex: 1;
+  max-width: 300px;
+  background: #ffffff;
+  border-radius: 25px;
+}
+#stake-t-capy .stake-form .form-row .form-input-group .form-control {
+  background: #ffffff;
+  border: none;
+  border-radius: 25px;
+  color: #000000;
+  padding: 12px 15px;
+  font-size: 14px;
+  flex: 1;
+}
+#stake-t-capy .stake-form .form-row .form-input-group .form-control:focus {
+  outline: none;
+  box-shadow: 0 0 0 2px rgba(71, 230, 255, 0.3);
+}
+#stake-t-capy .stake-form .form-row .form-input-group .form-control::placeholder {
+  color: #666666;
+}
+#stake-t-capy .stake-form .form-row .form-input-group .max-btn {
+  background: #009393;
+  border: none;
+  color: #ffffff;
+  padding: 14px 20px;
+  font-size: 14px;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  border-radius: 999px;
+  white-space: nowrap;
+  width: 100px;
+}
+#stake-t-capy .stake-form .form-row .form-input-group .max-btn:hover {
+  background: #ADFF39;
+  color: #000000;
+}
+#stake-t-capy .stake-form .form-row .form-select {
+  background: #ffffff;
+  border: none;
+  border-radius: 25px;
+  color: #000000;
+  padding: 12px 15px;
+  font-size: 14px;
+  max-width: 300px;
+  flex: 1;
+}
+#stake-t-capy .stake-form .form-row .form-select:focus {
   outline: none;
   box-shadow: 0 0 0 2px rgba(71, 230, 255, 0.3);
 }
