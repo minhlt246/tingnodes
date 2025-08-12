@@ -285,7 +285,7 @@ a {
   cursor: pointer;
   transition: all 0.3s ease;
   white-space: nowrap;
-  width: 100px;
+  width: 140px;
 }
 .overview .overview-sub-section .banner-section .url-section .copy-btn:hover {
   transform: translateY(-2px);
