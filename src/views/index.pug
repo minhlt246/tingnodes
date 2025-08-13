@@ -9,7 +9,7 @@ block content
                     .validator-dashboard
                         .validator-card
                             .validator-header
-                                img.validator-icon(src="client/images/t-cap.png" alt="")
+                                img.validator-icon(src="client/images/t-cap.png" )
                                 .validator-title
                                     span.title-text Validators hold 
                                     span.highlight TCAPY
@@ -45,9 +45,7 @@ block content
 
                 .modal-footer
                     button.stake-confirm-btn STAKE
-
-    .home
-        .modal.fade#stake-t-capy(tabindex="-1" aria-labelledby="stake-t-capy" aria-hidden="true")
+    .modal.fade#stake-t-capy(tabindex="-1" aria-labelledby="stake-t-capy" aria-hidden="true")
             .modal-dialog.modal-dialog-centered.modal-dialog-scrollable
                 .modal-content
                     .modal-header
@@ -56,7 +54,7 @@ block content
                         .validator-dashboard
                             .validator-card
                                 .validator-header
-                                    img.validator-icon(src="client/images/t-cap-1.png" alt="")
+                                    img.validator-icon(src="client/images/t-cap-1.png")
                                     .validator-title
                                         span.title-text Validators hold 
                                         span.highlight TCAPY
@@ -94,7 +92,7 @@ block content
 
                     .modal-footer
                         button.stake-confirm-btn STAKE       
-        .modal.fade#stakeModal(tabindex="-1" aria-labelledby="stake-t-capy" aria-hidden="true")
+    .modal.fade#stakeModal(tabindex="-1" aria-labelledby="stake-t-capy" aria-hidden="true")
             .modal-dialog.modal-dialog-centered.modal-dialog-scrollable
                 .modal-content
                     .modal-header
@@ -104,7 +102,7 @@ block content
                         .validator-dashboard
                             .validator-card
                                 .validator-header
-                                    img.validator-icon(src="client/images/t-cap.png" alt="")
+                                    img.validator-icon(src="client/images/t-cap.png")
                                     .validator-title
                                         span.title-text Validators hold 
                                         span.highlight TCAPY
@@ -142,24 +140,26 @@ block content
 
                     .modal-footer
                         button.stake-confirm-btn STAKE 
+            
+    .banner
+        img.img-banner(src="client/images/banner.png")
+        video.banner-video(src="client/images/banner-video.mp4" autoplay loop muted)
+        .banner-content
+            .container.h-100
+                .row.h-100.justify-content-center.align-items-center
+                    .col-8.col-lg-4
+                        img.w-100.floating(src="client/images/wellcome.png")
 
-        .container
-            .row
-                .col-lg-6.col-md-6.col-sm-12.d-flex.justify-content-center.align-items-center
-                    img.key-icon(src="client/images/tingnode-img.png")
-                .col-lg-6.col-md-6.col-sm-12.d-flex.justify-content-center.align-items-center
-                    img.key-tingnode(src="client/images/tingnode-banner.png")
     .validators 
         .container
-            .my-4.d-flex.justify-content-center.align-items-center.validators-title-text
-                span.validators-title-text-v.me-2 Validators 
-                span.validators-title-text-t TINGNODE
+            .my-4.text-center.validators-title.text-uppercase
+                | Validators TINGNODE
             .row.pt-5 
                 .col-lg-6.col-md-6.col-sm-12.d-flex.justify-content-center.align-items-center.pt-3
                     .validator-dashboard
                         .validator-card
                             .validator-header
-                                img.validator-icon(src="client/images/t-cap.png" alt="")
+                                img.validator-icon(src="client/images/t-cap.png")
                                 .validator-title
                                     span.title-text Validators hold 
                                     span.highlight TCAPY
@@ -188,7 +188,7 @@ block content
                     .validator-dashboard
                         .validator-card
                             .validator-header
-                                img.validator-icon(src="client/images/t-cap-1.png" alt="")
+                                img.validator-icon(src="client/images/t-cap-1.png")
                                 .validator-title
                                     span.title-text Validators hold 
                                     span.highlight TCAPY
