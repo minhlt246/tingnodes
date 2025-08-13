@@ -2,4 +2,55 @@ extends _layouts/master
 
 block content
     .overview
-     
+        .overview-banner
+            #particles-js
+            .banner-content
+                .container 
+                    .row 
+                        .col-lg-6.mx-auto
+                            .text-title.text-gradient.text-center.mb-2 Affirm the leading role in the system
+                            .text-center.mb-3 Introduce it today and join forces to develop the decentralized STAKING system
+                            .input-group.mb-3
+                                input.form-control(type="text" value="https://www.google.com.vn/?hl=vijakldiwiklnauo" aria-label="Recipient’s username" aria-describedby="basic-addon2")
+                                span.input-group-text
+                                    button.btn.border-0.px-4.py-0.text-white Copy
+        .overview-main.pb-4
+            .container 
+                ul.nav.nav-pills.overview-tag.mb-3.justify-content-center(role="tablist")
+                    li.nav-item(role="presentation")
+                        button.nav-link.active(data-bs-toggle="pill" data-bs-target="#system" type="button" role="tab" aria-controls="pills-home" aria-selected="true") MY SYSTEM
+                    li.nav-item(role="presentation")
+                        button.nav-link(data-bs-toggle="pill" data-bs-target="#commission" type="button" role="tab" aria-controls="pills-profile" aria-selected="false") MY COMMISSION
+                .tab-content
+                    #system.tab-pane.fade.show.active(role="tabpanel", aria-labelledby="pills-home-tab", tabindex="0") 
+                        .table-border
+                            .table-responsive
+                                table.table.table-striped.mb-0
+                                    thead
+                                        tr
+                                            th Wallet
+                                            th Hold
+                                            th.text-end Floor
+                                    tbody
+                                         -for (let i = 0; i < 5; i++)
+                                            tr
+                                                td 0x1234567890abcdef
+                                                td 10 TCAPY
+                                                td.text-end F1
+                    #commission.tab-pane.fade(role="tabpanel", aria-labelledby="pills-profile-tab", tabindex="0") 
+                        .table-border
+                            .table-responsive
+                                table.table.table-striped.mb-0
+                                    thead
+                                        tr
+                                            th No.
+                                            th Amount
+                                            th Note
+                                            th.text-end Date
+                                    tbody
+                                        -for (let i = 0; i < 5; i++)
+                                            tr
+                                                td=i+1
+                                                td 10 TCAPY
+                                                td 1234sv vc56678910khg
+                                                td.text-end 08/08/2025
