@@ -679,15 +679,15 @@ section {
       border-radius: var(--s);
       --s: 10px; /* độ rộng của shadow */
       position: relative;
+      
       &::before {
         content: "";
         position: absolute;
-        border-radius: inherit;
-        inset: -6px; // shadow phủ ra ngoài 12px
-        border-radius: 32px; // 20 + 12 = 32 (nên > 20, thử nghiệm cho đẹp)
+        inset: -8px;
+        border-radius: 32px;
         background: linear-gradient(90deg, #a48eff, #00ffff);
-        filter: blur(16px);
-        opacity: 0.5;
+        filter: blur(8px); // Giảm blur từ 16px xuống 8px
+        opacity: 0.3; // Giảm opacity từ 0.5 xuống 0.3
         z-index: 0;
         pointer-events: none;
         clip-path: polygon(
@@ -702,7 +702,6 @@ section {
           calc(100% - var(--s)) calc(0px  + var(--s)),
           calc(0px  + var(--s)) calc(0px  + var(--s))
         );
-        
       }
 
       >* {
@@ -721,8 +720,9 @@ section {
           gap: 15px;
           position: absolute;
           z-index: 2;
-              padding: 10px;    
-              top: -60%;
+          padding: 10px;    
+          top: -60%;
+          
           .validator-icon-container {
             position: relative;
             width: 100px;
@@ -738,12 +738,6 @@ section {
               border-radius: 50%;
               object-fit: cover;
               background: #01101B;
-              // border: 2px solid rgba(0, 191, 174, 0.3);
-              // position: absolute;
-              // z-index: 2;
-              // padding: 10px;    
-              // top: -60%;
-              
             }
           }
           
@@ -827,6 +821,7 @@ section {
               background: #ffff;
               border-radius: 999px;
               margin-left: 20px;
+              
               .form-control {
                 flex: 1;
                 background: #ffff;
@@ -836,6 +831,7 @@ section {
                 color: #000000;
                 font-size: 14px;
                 flex: 1;
+                
                 &:focus {
                   outline: none;
                   border-color: #00bfae;
@@ -858,6 +854,7 @@ section {
                 cursor: pointer;
                 transition: all 0.3s ease;
                 white-space: nowrap;
+                
                 &:hover {
                   transform: translateY(-1px);
                   box-shadow: 0 4px 12px rgba(0, 191, 174, 0.3);
@@ -913,15 +910,15 @@ section {
       border-radius: var(--s);
       --s: 10px; /* độ rộng của shadow */
       position: relative;
+      
       &::before {
         content: "";
         position: absolute;
-        border-radius: inherit;
-        inset: -6px; // shadow phủ ra ngoài 12px
-        border-radius: 32px; // 20 + 12 = 32 (nên > 20, thử nghiệm cho đẹp)
+        inset: -8px;
+        border-radius: 32px;
         background: linear-gradient(90deg, #a48eff, #00ffff);
-        filter: blur(16px);
-        opacity: 0.5;
+        filter: blur(8px); // Giảm blur từ 16px xuống 8px
+        opacity: 0.3; // Giảm opacity từ 0.5 xuống 0.3
         z-index: 0;
         pointer-events: none;
         clip-path: polygon(
@@ -936,7 +933,6 @@ section {
           calc(100% - var(--s)) calc(0px  + var(--s)),
           calc(0px  + var(--s)) calc(0px  + var(--s))
         );
-        
       }
 
       >* {
@@ -955,8 +951,9 @@ section {
           gap: 15px;
           position: absolute;
           z-index: 2;
-              padding: 10px;    
-              top: -60%;
+          padding: 10px;    
+          top: -60%;
+          
           .validator-icon-container {
             position: relative;
             width: 100px;
@@ -972,12 +969,6 @@ section {
               border-radius: 50%;
               object-fit: cover;
               background: #01101B;
-              // border: 2px solid rgba(0, 191, 174, 0.3);
-              // position: absolute;
-              // z-index: 2;
-              // padding: 10px;    
-              // top: -60%;
-              
             }
           }
           
@@ -1061,6 +1052,7 @@ section {
               background: #ffff;
               border-radius: 999px;
               margin-left: 20px;
+              
               .form-control {
                 flex: 1;
                 background: #ffff;
@@ -1070,6 +1062,7 @@ section {
                 color: #000000;
                 font-size: 14px;
                 flex: 1;
+                
                 &:focus {
                   outline: none;
                   border-color: #00bfae;
@@ -1092,6 +1085,7 @@ section {
                 cursor: pointer;
                 transition: all 0.3s ease;
                 white-space: nowrap;
+                
                 &:hover {
                   transform: translateY(-1px);
                   box-shadow: 0 4px 12px rgba(0, 191, 174, 0.3);
@@ -1135,295 +1129,6 @@ section {
     }
   }
 }
-// Validators Section Styles
-.validators {
-  background: linear-gradient(135deg, #000000 0%, #001a1a 100%);
-  padding: 100px 0;
-  height: auto;
 
-  .validators-title-text {
-    color: #fff;
-    font-size: 40px;
-    font-weight: bold;
-
-    .validators-title-text-v {
-      font-size: 30px;
-      color: #000000;
-    }
-
-    .validators-title-text-t {
-      font-size: 30px;
-      color: #009393;
-    }
-  }
-
-  .validator-dashboard {
-    width: auto;
-    height: auto;
-  }
-
-  .validator-card {
-    --s: 10px;
-    position: relative;
-    background: #222;
-    border-radius: 16px;
-    padding: 30px;
-    width: 600px;
-    color: white;
-    border: 2px solid #00AEAE;
-    display: flex;
-
-    &::before {
-      content: "";
-      position: absolute;
-      inset: -8px;
-      border-radius: 32px;
-      background: linear-gradient(90deg, #a48eff, #00ffff);
-      filter: blur(16px);
-      opacity: 0.5;
-      z-index: 0;
-      pointer-events: none;
-      clip-path: polygon(
-        -100vmax -100vmax,
-        100vmax -100vmax,
-        100vmax 100vmax,
-        -100vmax 100vmax,
-        -100vmax -100vmax,
-        calc(0px  + var(--s)) calc(0px  + var(--s)),
-        calc(0px  + var(--s)) calc(100% - var(--s)),
-        calc(100% - var(--s)) calc(100% - var(--s)),
-        calc(100% - var(--s)) calc(0px  + var(--s)),
-        calc(0px  + var(--s)) calc(0px  + var(--s))
-      );
-    }
-
-    .validator-left {
-      flex: 0 0 auto;
-      margin-right: 25px;
-
-      .validator-icon-container {
-        position: relative;
-        width: 170px;
-        height: 170px;
-        display: flex;
-        align-items: center;
-        justify-content: center;
-        border-radius: 50%;
-        background: linear-gradient(135deg, #1a1a1a 0%, #2a2a2a 100%);
-        border: 3px solid rgba(0, 191, 174, 0.4);
-        --s: 10px;
-        position: relative;
-        transform: translate(0);
-        transform-style: preserve-3d;
-        transition: all 0.3s ease;
-        z-index: 1;
-
-        &::before {
-          content: "";
-          position: absolute;
-          inset: -5px;
-          transform: translate3d(0px, 8px, -1px);
-          background: conic-gradient(from 90deg at 30% 23%, rgba(164, 142, 255, 1) 0%, rgba(0, 255, 255, 1) 100%);
-          filter: blur(16px);
-          border-radius: inherit;
-        }
-
-        .validator-icon {
-          width: 80%;
-          height: 80%;
-          border-radius: 50%;
-          object-fit: cover;
-          background: transparent;
-          border: none;
-          position: relative;
-          z-index: 3;
-          transition: all 0.3s ease;
-
-          &:hover {
-            transform: scale(1.1);
-          }
-        }
-      }
-    }
-
-    .validator-right {
-      flex: 1;
-      display: flex;
-      flex-direction: column;
-      justify-content: space-between;
-      height: 100%;
-
-      .validator-title {
-        margin-bottom: 20px;
-
-        .title-text {
-          color: #87ceeb;
-          font-size: 16px;
-          font-weight: 500;
-          margin: 0;
-        }
-
-        .highlight {
-          color: #00bfae;
-          font-weight: bold;
-        }
-      }
-
-      .validator-metrics {
-        margin-bottom: 20px;
-
-        .metric-item {
-          display: flex;
-          justify-content: space-between;
-          align-items: center;
-          padding: 8px 0;
-          margin-bottom: 8px;
-
-          .metric-label {
-            color: #87ceeb;
-            font-size: 13px;
-            font-weight: 400;
-          }
-
-          .metric-value {
-            color: #ffffff;
-            font-size: 14px;
-            font-weight: 500;
-
-            &.circulation {
-              color: #ffffff;
-            }
-
-            &.apr {
-              color: #ffffff;
-            }
-
-            &.holders {
-              color: #00bfae;
-              text-decoration: underline;
-              cursor: pointer;
-            }
-          }
-        }
-      }
-
-      .validator-action {
-        margin-top: auto;
-
-        .hold-button,
-        .stake-button {
-          width: 100%;
-          background: linear-gradient(90deg, #c4a7ff 0%, #00bfae 100%);
-          border: none;
-          border-radius: 25px;
-          padding: 12px 0;
-          color: #ffffff;
-          font-size: 14px;
-          font-weight: 600;
-          text-transform: uppercase;
-          cursor: pointer;
-          transition: all 0.3s ease;
-          box-shadow: 0 4px 15px rgba(0, 191, 174, 0.3);
-
-          &:hover {
-            transform: translateY(-2px);
-            box-shadow: 0 6px 20px rgba(0, 191, 174, 0.4);
-          }
-
-          &:active {
-            transform: translateY(0);
-          }
-        }
-      }
-    }
-  }
-}
-
-// Responsive Design
-@media (max-width: 768px) {
-  .validators {
-    padding: 60px 0;
-
-    .validators-title-text {
-      font-size: 28px;
-
-      .validators-title-text-v,
-      .validators-title-text-t {
-        font-size: 20px;
-      }
-    }
-
-    .validator-card {
-      width: 100%;
-      max-width: 400px;
-      padding: 20px;
-      flex-direction: column;
-      align-items: center;
-
-      .validator-left {
-        margin-right: 0;
-        margin-bottom: 20px;
-
-        .validator-icon-container {
-          width: 120px;
-          height: 120px;
-        }
-      }
-
-      .validator-right {
-        width: 100%;
-        text-align: center;
-
-        .validator-metrics {
-          .metric-item {
-            justify-content: space-between;
-          }
-        }
-      }
-    }
-  }
-
-  #stakeModal {
-    .modal-dialog {
-      .modal-content {
-        .modal-header {
-          padding: 20px 20px 15px;
-
-          .validator-header {
-            flex-direction: column;
-            text-align: center;
-            gap: 10px;
-
-            .validator-icon-container {
-              width: 80px;
-              height: 80px;
-            }
-          }
-        }
-
-        .modal-body {
-          padding: 0 20px 20px;
-
-          .stake-form {
-            .form-row {
-              flex-direction: column;
-              align-items: flex-start;
-              gap: 8px;
-
-              .form-input-group {
-                width: 100%;
-                margin-left: 0;
-              }
-            }
-          }
-        }
-
-        .modal-footer {
-          padding: 15px 20px 20px;
-        }
-      }
-    }
-  }
-}
-
+// Val
 
