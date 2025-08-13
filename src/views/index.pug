@@ -1,20 +1,63 @@
 extends _layouts/master
 
 block content
-    .home
-        .modal.fade#stakeModal(tabindex="-1" aria-labelledby="stakeModal" aria-hidden="true")
-            .modal-dialog.modal-dialog-centered
+
+    //- #stakeModal.modal.fade(tabindex="-1" aria-labelledby="stakeModalLabel" aria-hidden="true")
+        .modal-dialog.modal-dialog-centered
+            .modal-content
+                .modal-body
+                    .validator-dashboard
+                        .validator-card
+                            .validator-header
+                                img.validator-icon(src="client/images/t-cap.png" )
+                                .validator-title
+                                    span.title-text Validators hold 
+                                    span.highlight TCAPY
+                    .stake-form
+                        .form-row
+                            .form-label MIN Stake
+                            .form-value 15,000 TCAPY
+
+                        .form-row
+                            .form-label Balance
+                            .d-flex.align-items-center.justify-content-between
+                                .form-value 1,300,000 
+                                span TCAPY
+
+                        .form-row
+                            .form-label Amount
+                            .form-input-group
+                                input#stakeAmount.form-control(type="number" placeholder="Enter amount" min="15000" step="1000")
+                                button.max-btn MAX
+
+                        .form-row
+                            .form-label Period
+                            .form-input-group
+                                select#stakePeriod.form-control
+                                    option(value="3") 3 months
+                                    option(value="6") 6 months
+                                    option(value="12") 12 months
+                                    option(value="24") 24 months
+
+                        .form-row
+                            .form-label APY
+                            .form-value.apy-value 5%
+
+                .modal-footer
+                    button.stake-confirm-btn STAKE
+    .modal.fade#stake-t-capy(tabindex="-1" aria-labelledby="stake-t-capy" aria-hidden="true")
+            .modal-dialog.modal-dialog-centered.modal-dialog-scrollable
                 .modal-content
                     .modal-header
-                        .validator-header
-                            .validator-icon-container
-                                img.validator-icon(src="./client/images/t-cap-1.png" alt="TCAPY Validator")
-                                
-                            .validator-title
-                                span.title-text Validators hold TCAPY
-                        button.btn-close(type='button' data-bs-dismiss='modal' aria-label='Close')           
-                    
+                        button.btn-close(type='button' data-bs-dismiss='modal' aria-label='Close')
                     .modal-body
+                        .validator-dashboard
+                            .validator-card
+                                .validator-header
+                                    img.validator-icon(src="client/images/t-cap-1.png")
+                                    .validator-title
+                                        span.title-text Validators hold 
+                                        span.highlight TCAPY
                         .stake-form
                             .form-row
                                 .form-label MIN Stake
@@ -48,24 +91,25 @@ block content
                                 .form-value.apy-value 5%
 
                     .modal-footer
-                        button.stake-confirm-btn STAKE
-        .modal.fade#holdModal(tabindex="-1" aria-labelledby="holdModal" aria-hidden="true")
-            .modal-dialog.modal-dialog-centered
+                        button.stake-confirm-btn STAKE       
+    .modal.fade#stakeModal(tabindex="-1" aria-labelledby="stake-t-capy" aria-hidden="true")
+            .modal-dialog.modal-dialog-centered.modal-dialog-scrollable
                 .modal-content
                     .modal-header
-                        .validator-header
-                            .validator-icon-container
-                                img.validator-icon(src="./client/images/t-cap.png" alt="TCAPY Validator")
-                                
-                            .validator-title
-                                span.title-text Validators hold TCAPY
-                        button.btn-close(type='button' data-bs-dismiss='modal' aria-label='Close')           
-                    
+                        
+                        button.btn-close(type='button' data-bs-dismiss='modal' aria-label='Close')
                     .modal-body
+                        .validator-dashboard
+                            .validator-card
+                                .validator-header
+                                    img.validator-icon(src="client/images/t-cap.png")
+                                    .validator-title
+                                        span.title-text Validators hold 
+                                        span.highlight TCAPY
                         .stake-form
                             .form-row
                                 .form-label MIN Stake
-                                .d-flex.align-items-center.justify-content-between
+                                .d-flex.align-items-center.justify-content-between 
                                     .form-value 15,000 
                                     span.text-capy TCAPY
 
@@ -95,80 +139,79 @@ block content
                                 .form-value.apy-value 5%
 
                     .modal-footer
-                        button.stake-confirm-btn HOLD
-        .container
-            .row
-                .col-lg-6.col-md-6.col-sm-12.d-flex.justify-content-center.align-items-center
-                    img.key-icon(src="client/images/tingnode-img.png")
-                .col-lg-6.col-md-6.col-sm-12.d-flex.justify-content-center.align-items-center
-                    img.key-tingnode(src="client/images/tingnode-banner.png")
+                        button.stake-confirm-btn STAKE 
+            
+    .banner
+        img.img-banner(src="client/images/banner.png")
+        video.banner-video(src="client/images/banner-video.mp4" autoplay loop muted)
+        .banner-content
+            .container.h-100
+                .row.h-100.justify-content-center.align-items-center
+                    .col-8.col-lg-4
+                        img.w-100.floating(src="client/images/wellcome.png")
+
     .validators 
         .container
-            .my-4.d-flex.justify-content-center.align-items-center.validators-title-text
-                span.validators-title-text-v.me-2 Validators 
-                span.validators-title-text-t TINGNODE
+            .my-4.text-center.validators-title.text-uppercase
+                | Validators TINGNODE
             .row.pt-5 
-                .col-lg-6.col-md-12.col-sm-12.d-flex.justify-content-center.align-items-center.pt-3
+                .col-lg-6.col-md-6.col-sm-12.d-flex.justify-content-center.align-items-center.pt-3
                     .validator-dashboard
                         .validator-card
-                            .validator-left
-                                .validator-icon-container
-                                    img.validator-icon(src="client/images/t-cap.png" alt="")
-                            .validator-right
+                            .validator-header
+                                img.validator-icon(src="client/images/t-cap.png")
                                 .validator-title
                                     span.title-text Validators hold 
                                     span.highlight TCAPY
 
-                                .validator-metrics
-                                    .metric-item
-                                        .metric-label In Circulation
-                                        .metric-value.circulation 100,000,000
+                            .validator-metrics
+                                .metric-item
+                                    .metric-label In Circulation
+                                    .metric-value.circulation 100,000,000
 
-                                    .metric-item
-                                        .metric-label Staking TONCAPY
-                                        .metric-value 15,000
+                                .metric-item
+                                    .metric-label Staking TONCAPY
+                                    .metric-value 15,000
 
-                                    .metric-item
-                                        .metric-label APR
-                                        .metric-value.apr 0.2% - 0.68% / Day
+                                .metric-item
+                                    .metric-label APR
+                                    .metric-value.apr 0.2% - 0.68% / Day
 
-                                    .metric-item
-                                        .metric-label Holders
-                                        .metric-value.holders 15,000
+                                .metric-item
+                                    .metric-label Holders
+                                    .metric-value 15,000
 
                                 .validator-action
-                                    button.hold-button(data-bs-toggle="modal" data-bs-target="#holdModal") HOLD
+                                    button.stake-button(data-bs-toggle="modal" data-bs-target="#stakeModal") STAKE  
 
-                .col-lg-6.col-md-12.col-sm-12.d-flex.justify-content-center.align-items-center.pt-3
+                .col-lg-6.col-md-6.col-sm-12.d-flex.justify-content-center.align-items-center.pt-3
                     .validator-dashboard
                         .validator-card
-                            .validator-left
-                                .validator-icon-container
-                                    img.validator-icon(src="client/images/t-cap-1.png" alt="")
-                            .validator-right
+                            .validator-header
+                                img.validator-icon(src="client/images/t-cap-1.png")
                                 .validator-title
                                     span.title-text Validators hold 
                                     span.highlight TCAPY
 
-                                .validator-metrics
-                                    .metric-item
-                                        .metric-label In Circulation
-                                        .metric-value.circulation 100,000,000
+                            .validator-metrics
+                                .metric-item
+                                    .metric-label In Circulation
+                                    .metric-value.circulation 100,000,000
 
-                                    .metric-item
-                                        .metric-label Staking TONCAPY
-                                        .metric-value 15,000
+                                .metric-item
+                                    .metric-label Staking TONCAPY
+                                    .metric-value 15,000
 
-                                    .metric-item
-                                        .metric-label APR
-                                        .metric-value.apr 0.2% - 0.68% / Day
+                                .metric-item
+                                    .metric-label APR
+                                    .metric-value.apr 0.2% - 0.68% / Day
 
-                                    .metric-item
-                                        .metric-label Holders
-                                        .metric-value.holders 15,000
+                                .metric-item
+                                    .metric-label Holders
+                                    .metric-value 15,000
 
                                 .validator-action
-                                    button.stake-button(data-bs-toggle="modal" data-bs-target="#stakeModal") STAKE
+                                    button.stake-button(data-bs-toggle="modal" data-bs-target="#stake-t-capy") STAKE
 
 
 
