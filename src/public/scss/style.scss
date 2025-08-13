@@ -2,12 +2,12 @@
 @use "./galaxy.scss" as galaxy;
 @use "./overview.scss" as *;
 
-$background-color: #01101B;
-$color-page: #ffffff;
+$background-color: #01101b;
+$color-page: #BCC8C8;
 $color-page2: #ffffff;
-$color-page3: #C4A7FF;
-$color-page4: #ADFF39;
-$bnt-radiant: linear-gradient(#003E3E, #000000);
+$color-page3: #c4a7ff;
+$color-page4: #adff39;
+$bnt-radiant: linear-gradient(#003e3e, #000000);
 $primary-color: #00bfae;
 $secondary-color: #f2f2f2;
 $button-color: #4caf50;
@@ -18,7 +18,6 @@ $highlight-color: #ff9800;
 $bg-color: #f1f5f8;
 $card-bg-color: #ffffff;
 $button-color: #ffc107;
-
 
 .floating {
   animation-name: floating;
@@ -60,7 +59,6 @@ $button-color: #ffc107;
 }
 
 .slick-slider {
-
   .slick-prev,
   .slick-next {
     position: absolute;
@@ -164,14 +162,15 @@ body {
   background-color: $background-color;
   font-size: 12px;
   overflow-x: hidden;
+  color: $color-page;
 }
 
 //global class
 :root,
-[data-bs-theme=light] {
+[data-bs-theme="light"] {
   --bs-success-rgb: 126, 217, 87;
   --bs-danger-text-emphasis: #f9b49d;
-  --bs-border-color: #5D7171;
+  --bs-border-color: #5d7171;
 }
 
 .logo {
@@ -195,12 +194,12 @@ body {
 
   option {
     color: $color-page;
-    background: #1B1C21;
+    background: #1b1c21;
   }
 }
 
 .modal-content {
-  background: #002F2F;
+  background: #002f2f;
 }
 
 .dropdown-menu {
@@ -228,8 +227,8 @@ body {
 }
 
 .input-group {
-  background: #002F2F;
-  border-radius: 5px;
+  background: #ffffff;
+  border-radius: 30px;
 
   .input-group-text,
   .form-select,
@@ -237,24 +236,42 @@ body {
     //--bs-form-select-bg-img: url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 16 16'%3e%3cpath fill='none' stroke='%23ffffff' stroke-linecap='round' stroke-linejoin='round' stroke-width='2' d='m2 5 6 6 6-6'/%3e%3c/svg%3e");
     background-color: transparent;
     border: 0;
-
     &::placeholder {
-      color: #fff;
+      color: $color-page;
     }
+  }
+  .input-group-text{
+    background: #009393;
+    border-radius: 30px !important;
+    color: #fff;
   }
 }
 
 .text-pink {
   color: #f3bb02;
 }
-.text-capy{
-  color: #BCC8C8;
+
+.text-capy {
+  color: #bcc8c8;
   font-size: 14px;
   font-weight: 300;
   margin-left: 8px;
 }
+
+.text-gradient {
+  font-weight: bold;
+  background-image: linear-gradient(to right, #a48eff 20%, #00ffff);
+  -webkit-background-clip: text;
+  background-clip: text;
+  -webkit-text-fill-color: transparent;
+  color: transparent;
+}
+.text-title{
+  font-size: 25px;
+  font-family: 'UTM', Times, serif;
+}
 .btn-submit {
-  background: linear-gradient(#009393, #002C2C);
+  background: linear-gradient(#009393, #002c2c);
   color: #fff;
   font-weight: bold;
   border: 0;
@@ -263,7 +280,7 @@ body {
     color: #fff;
   }
 }
-.flag-icon{
+.flag-icon {
   width: 30px;
   height: 30px;
   border-radius: 50%;
@@ -271,7 +288,7 @@ body {
   display: flex;
   align-items: center;
   justify-content: center;
-  font-size: 8.5rem;; // tuỳ chọn, cho viền nhẹ
+  font-size: 8.5rem; // tuỳ chọn, cho viền nhẹ
 }
 header {
   background: #01101baf;
@@ -301,7 +318,6 @@ header {
     &:active {
       transform: scale(0.98);
       color: #fff;
-
     }
   }
 
@@ -317,7 +333,7 @@ header {
       }
 
       .nav-link {
-        color: #BCC8C8;
+        color: #bcc8c8;
         font-size: 14px;
 
         @include sm {
@@ -327,11 +343,11 @@ header {
         }
 
         &:hover {
-          color: #00AEAE;
+          color: #00aeae;
         }
 
         &.active {
-          color: #00AEAE;
+          color: #00aeae;
         }
       }
     }
@@ -382,49 +398,48 @@ header {
 
   .dropdown-menu {
     background: #000202;
-    border: 1px solid #47E6FF;
+    border: 1px solid #47e6ff;
     border-radius: 10px;
 
     .dropdown-item {
-      color: #47E6FF;
+      color: #47e6ff;
 
       &:hover {
-        background: #47E6FF;
+        background: #47e6ff;
         color: #000202;
       }
     }
   }
-
 }
 
 section {
-  .banner{
+  .banner {
     position: relative;
-    .img-banner{
+    .img-banner {
       width: 100%;
       height: 100%;
       object-fit: cover;
-      @include sm{
+      @include sm {
         height: 80vh;
       }
     }
-    .banner-video{
+    .banner-video {
       position: absolute;
       top: 0;
       left: 0;
-      width:100%;
-      height:100%;
+      width: 100%;
+      height: 100%;
       z-index: 1;
       object-fit: cover;
     }
-    .banner-content{
+    .banner-content {
       position: absolute;
-      bottom:-5%;
+      bottom: -5%;
       height: 50%;
       left: 0;
       right: 0;
       z-index: 2;
-      background: linear-gradient(to bottom, rgba(0, 0, 0, 0) 0%, #01101B 80%);
+      background: linear-gradient(to bottom, rgba(0, 0, 0, 0) 0%, #01101b 80%);
     }
   }
 
@@ -439,8 +454,12 @@ section {
     }
 
     .validator-dashboard {
-      background: #002C2C;
-      background: linear-gradient(0deg, rgba(0, 44, 44, 1) 0%, rgba(0, 85, 85, 1) 100%);
+      background: #002c2c;
+      background: linear-gradient(
+        0deg,
+        rgba(0, 44, 44, 1) 0%,
+        rgba(0, 85, 85, 1) 100%
+      );
       border-radius: 20px;
       padding: 0;
       width: 450px;
@@ -452,13 +471,13 @@ section {
 
     .validator-card {
       padding: 20px;
-      content: '';
+      content: "";
       position: absolute;
       top: 20%;
       left: 0;
       right: 0;
       height: 60px;
-      background: #002D2D;
+      background: #002d2d;
       transform: translateY(-50%);
       z-index: 1;
     }
@@ -476,7 +495,6 @@ section {
       }
 
       .validator-title {
-
         .title-text {
           color: #ffffff;
           font-size: 18px;
@@ -485,7 +503,7 @@ section {
         }
 
         .highlight {
-          color: #47E6FF;
+          color: #47e6ff;
           font-weight: bold;
           margin-right: 20px;
         }
@@ -506,10 +524,8 @@ section {
         padding: 12px 0;
         border-bottom: 2px solid #009393;
 
-
-
         .metric-label {
-          color: #BCC8C8;
+          color: #bcc8c8;
           font-size: 14px;
           font-weight: 400;
         }
@@ -520,11 +536,11 @@ section {
           font-weight: 300;
 
           &.circulation {
-            color: #FBB111;
+            color: #fbb111;
           }
 
           &.apr {
-            color: #FBB111;
+            color: #fbb111;
           }
         }
       }
@@ -535,8 +551,12 @@ section {
 
       .stake-button {
         width: 100%;
-        background: #DC9C00;
-        background: linear-gradient(90deg, rgba(220, 156, 0, 1) 0%, rgba(0, 174, 174, 1) 100%);
+        background: #dc9c00;
+        background: linear-gradient(
+          90deg,
+          rgba(220, 156, 0, 1) 0%,
+          rgba(0, 174, 174, 1) 100%
+        );
         border: none;
         border-radius: 999px;
         padding: 10px 0px;
@@ -549,38 +569,60 @@ section {
 
         &:hover {
           transform: translateY(-5px);
-
         }
-
       }
     }
-
   }
-
 }
+.table-border{
+  border: 1px solid #009393;
+  border-radius: 10px;
+  overflow: hidden;
 
+  .table {
+    border-collapse: collapse;
+    width: 100%;
+    --bs-table-bg: #011D27;
+    --bs-table-color: #ffffff;
+    --bs-table-striped-color: #ffffff;
+    th,
+    td {
+      padding: 12px 15px;
+      border-bottom: 1px solid #009393;
+    }
+    thead{
+      tr{
+        th {
+          color: #6399FF;
+        }
+      }
+    }
+  }
+  .table-striped>tbody>tr:nth-of-type(odd)>*{
+    --bs-table-striped-bg: #012932;
+  }
+}
 #stakeModal {
   .modal-dialog {
     .modal-content {
       .modal-header {
         border-bottom: none;
-        
       }
-      background: linear-gradient(180deg, #004D4D 0%, #003E3E 100%);
+      background: linear-gradient(180deg, #004d4d 0%, #003e3e 100%);
       height: 100%;
 
       &::before {
         content: "";
         position: absolute;
         inset: 0;
-        background: url('../images/bannner-modal.png') center center no-repeat;
+        background: url("../images/bannner-modal.png") center center no-repeat;
         background-size: 320px 320px;
         opacity: 0.18;
         pointer-events: none;
         z-index: 0;
       }
 
-      >* {
+      > * {
         z-index: 1;
       }
     }
@@ -590,7 +632,7 @@ section {
   border: none;
   border-radius: 20px;
   color: #ffffff;
-  
+
   overflow: hidden;
   height: auto;
   min-height: 450px;
@@ -613,7 +655,7 @@ section {
       left: 0;
       right: 0;
       height: 60px;
-      background: #002D2D;
+      background: #002d2d;
       transform: translateY(-50%);
       z-index: 1;
     }
@@ -641,7 +683,7 @@ section {
         }
 
         .highlight {
-          color: #47E6FF;
+          color: #47e6ff;
           font-weight: bold;
           margin-right: 20px;
         }
@@ -673,7 +715,7 @@ section {
         font-weight: 300;
 
         &.apy-value {
-          color: #FBB111;
+          color: #fbb111;
           font-weight: bold;
         }
       }
@@ -719,7 +761,7 @@ section {
           width: 100px;
 
           &:hover {
-            background: #ADFF39;
+            background: #adff39;
             color: #000000;
           }
         }
@@ -750,23 +792,22 @@ section {
     .modal-content {
       .modal-header {
         border-bottom: none;
-       
       }
-      background: linear-gradient(180deg, #004D4D 0%, #003E3E 100%);
+      background: linear-gradient(180deg, #004d4d 0%, #003e3e 100%);
       height: 100%;
 
       &::before {
         content: "";
         position: absolute;
         inset: 0;
-        background: url('../images/bannner-modal.png') center center no-repeat;
+        background: url("../images/bannner-modal.png") center center no-repeat;
         background-size: 320px 320px;
         opacity: 0.18;
         pointer-events: none;
         z-index: 0;
       }
 
-      >* {
+      > * {
         z-index: 1;
       }
     }
@@ -787,7 +828,7 @@ section {
     padding: 0 30px 25px;
     position: relative;
     z-index: 2;
-      padding-top: 40px;
+    padding-top: 40px;
   }
 
   .validator-dashboard {
@@ -801,7 +842,7 @@ section {
       left: 0;
       right: 0;
       height: 60px;
-      background: #002D2D;
+      background: #002d2d;
       transform: translateY(-50%);
       z-index: 1;
     }
@@ -829,7 +870,7 @@ section {
         }
 
         .highlight {
-          color: #47E6FF;
+          color: #47e6ff;
           font-weight: bold;
           margin-right: 20px;
         }
@@ -861,7 +902,7 @@ section {
         font-weight: 300;
 
         &.apy-value {
-          color: #FBB111;
+          color: #fbb111;
           font-weight: bold;
         }
       }
@@ -907,7 +948,7 @@ section {
           width: 100px;
 
           &:hover {
-            background: #ADFF39;
+            background: #adff39;
             color: #000000;
           }
         }
@@ -941,7 +982,11 @@ section {
 
   .stake-confirm-btn {
     width: 100%;
-    background: linear-gradient(90deg, rgba(220, 156, 0, 1) 0%, rgba(0, 174, 174, 1) 100%);
+    background: linear-gradient(
+      90deg,
+      rgba(220, 156, 0, 1) 0%,
+      rgba(0, 174, 174, 1) 100%
+    );
     border: none;
     border-radius: 25px;
     padding: 15px 30px;
