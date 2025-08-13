@@ -2,7 +2,7 @@
 @use "./galaxy.scss" as galaxy;
 @use "./overview.scss" as *;
 
-$background-color: linear-gradient(#003E3E, #000000 60%);
+$background-color: #01101B;
 $color-page: #ffffff;
 $color-page2: #ffffff;
 $color-page3: #C4A7FF;
@@ -161,7 +161,7 @@ $button-color: #ffc107;
 }
 
 body {
-  background-color: white;
+  background-color: $background-color;
   font-size: 12px;
   overflow-x: hidden;
 }
@@ -181,7 +181,6 @@ body {
 .sp-icon {
   height: 46px;
 }
-
 .cur-poiter {
   cursor: pointer;
 }
@@ -264,28 +263,46 @@ body {
     color: #fff;
   }
 }
-
+.flag-icon{
+  width: 30px;
+  height: 30px;
+  border-radius: 50%;
+  overflow: hidden;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 8.5rem;; // tuỳ chọn, cho viền nhẹ
+}
 header {
-  background: #DCFFFF;
-
+  background: #01101baf;
   .img-logo {
     height: auto;
-
     width: 160px;
-
     @include sm {
       width: 105px;
     }
   }
 
-  .btn-wallet {
+  .btn-connect {
     background: #009393;
     color: #fff;
     border: none;
     border-radius: 999px;
     padding: 10px 20px;
     font-size: 14px;
+    transition: background-color 0.3s ease, transform 0.2s ease;
 
+    &:hover {
+      background: #016b6b;
+      transform: scale(1.05);
+      color: #fff;
+    }
+
+    &:active {
+      transform: scale(0.98);
+      color: #fff;
+
+    }
   }
 
   .navbar-nav {
@@ -300,7 +317,7 @@ header {
       }
 
       .nav-link {
-        color: #5D7171;
+        color: #BCC8C8;
         font-size: 14px;
 
         @include sm {
@@ -310,11 +327,11 @@ header {
         }
 
         &:hover {
-          color: #47E6FF;
+          color: #00AEAE;
         }
 
         &.active {
-          color: #009393;
+          color: #00AEAE;
         }
       }
     }
@@ -381,19 +398,33 @@ header {
 }
 
 section {
-  .home {
-    background: linear-gradient(0deg, rgb(0, 16, 16) 0%, rgb(0, 62, 62) 100%);
-    padding: 100px 0;
-    height: auto;
-
-    .key-icon {
-      width: 70%;
-      height: auto;
-    }
-
-    .key-tingnode {
+  .banner{
+    position: relative;
+    .img-banner{
       width: 100%;
-      height: auto;
+      height: 100%;
+      object-fit: cover;
+      @include sm{
+        height: 80vh;
+      }
+    }
+    .banner-video{
+      position: absolute;
+      top: 0;
+      left: 0;
+      width:100%;
+      height:100%;
+      z-index: 1;
+      object-fit: cover;
+    }
+    .banner-content{
+      position: absolute;
+      bottom:-5%;
+      height: 50%;
+      left: 0;
+      right: 0;
+      z-index: 2;
+      background: linear-gradient(to bottom, rgba(0, 0, 0, 0) 0%, #01101B 80%);
     }
   }
 
