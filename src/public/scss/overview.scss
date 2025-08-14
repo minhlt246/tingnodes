@@ -167,7 +167,7 @@
               justify-content: space-between;
               align-items: center;
               padding: 12px 0;
-  
+              border-bottom: 2px solid #00AEAE;
               &:last-child {
                 border-bottom: none;
               }
@@ -226,7 +226,7 @@
                 .period-item {
                   flex: 1;
                   padding: 15px;
-                  text-align: center;
+                  text-align: start;
                   position: relative;
   
                   // Vertical separators between columns
@@ -237,7 +237,8 @@
                     top: 0;
                     bottom: 0;
                     width: 1px;
-  
+                    border-right: 2px solid #00AEAE;
+                    text-align: center;
                   }
   
                   .period-label {
