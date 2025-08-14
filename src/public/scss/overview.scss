@@ -19,24 +19,27 @@
       padding: 150px 0;
     }
   }
-  .overview-tag{
-    transform: translateY(-70px);
-    position: relative;
-    z-index: 3;
-    .nav-item{
-      .nav-link{
-        border: 1px solid transparent;
-        border-radius: 30px;
-        background: transparent;
-        color: #00AEAE;
-        border: 2px solid transparent;
-        &.active{
-          border-color: #6399FF;
-          color: #6399FF;
-          font-weight: bold;
-        }
+}
+.tag-banner{
+  transform: translateY(-70px);
+}
+.overview-tag {
+  position: relative;
+  z-index: 3;
+
+  .nav-item {
+    .nav-link {
+      border: 1px solid transparent;
+      border-radius: 30px;
+      background: transparent;
+      color: #00AEAE;
+      border: 2px solid transparent;
+
+      &.active {
+        border-color: #6399FF;
+        color: #6399FF;
+        font-weight: bold;
       }
     }
   }
-    
 }

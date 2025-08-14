@@ -1,6 +1,7 @@
 @use "./breakpoint.scss" as *;
 @use "./galaxy.scss" as galaxy;
-@use "./overview.scss" as *;
+@use "./overview.scss" as overview;
+@use "./validators.scss" as validators;
 
 $background-color: #01101B;
 $color-page: #BCC8C8;
@@ -250,7 +251,7 @@ body {
 
 .text-gradient {
   font-weight: bold;
-  background-image: linear-gradient(to right, #a48eff 20%, #00ffff);
+  background-image: linear-gradient(to right, #a48eff 30%, #00ffff);
   -webkit-background-clip: text;
   background-clip: text;
   -webkit-text-fill-color: transparent;
@@ -283,7 +284,15 @@ body {
   justify-content: center;
   font-size: 8.5rem; // tuỳ chọn, cho viền nhẹ
 }
-
+.btn-delegate {
+  border: 1px solid #00FFFF;
+  color: #00FFFF;
+  border-radius: 30px;
+  &:hover{
+    background: #00FFFF;
+    color: #01101B;
+  }
+}
 header {
   background: #01101baf;
 
@@ -297,22 +306,49 @@ header {
   }
 
   .btn-connect {
-    background: #009393;
+    background: linear-gradient(to right, #684dd9 0%, #00b8b8 100%);
     color: #fff;
     border: none;
     border-radius: 999px;
-    padding: 10px 20px;
     font-size: 14px;
-    transition: background-color 0.3s ease, transform 0.2s ease;
+    position: relative;
+    overflow: hidden;
+    transition: all 0.3s ease;
+    cursor: pointer;
+
+    &::before {
+      content: '';
+      position: absolute;
+      top: 0;
+      left: -100%;
+      width: 100%;
+      height: 100%;
+      background: linear-gradient(90deg,
+          transparent,
+          rgba(255, 255, 255, 0.4),
+          transparent);
+      transition: left 0.5s ease;
+    }
 
     &:hover {
-      background: #016b6b;
-      transform: scale(1.05);
+      transform: translateY(-2px);
+      box-shadow: 0 8px 25px rgba(104, 77, 217, 0.3);
       color: #fff;
+
+      &::before {
+        left: 100%;
+      }
     }
 
     &:active {
-      transform: scale(0.98);
+      transform: translateY(0);
+      box-shadow: 0 4px 15px rgba(104, 77, 217, 0.2);
+      color: #fff;
+    }
+
+    &:focus {
+      outline: none;
+      box-shadow: 0 0 0 3px rgba(104, 77, 217, 0.3);
       color: #fff;
     }
   }
@@ -770,6 +806,7 @@ section {
             .validator-title {
               flex: 1;
               position: relative;
+
               .title-text {
                 background: linear-gradient(90deg, #684DD9 0%, #00B8B8 100%);
                 -webkit-background-clip: text;
