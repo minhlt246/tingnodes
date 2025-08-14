@@ -196,7 +196,7 @@ body {
 
   .dropdown-item {
     color: white;
-
+    width: auto !important;
     &:hover {
       background: rgba(0, 0, 0, 0.6);
     }
@@ -295,6 +295,53 @@ body {
     color: #01101B;
   }
 }
+.btn-connect {
+  background: linear-gradient(to right, #684dd9 0%, #00b8b8 100%);
+  color: #fff;
+  border: none;
+  border-radius: 999px;
+  font-size: 14px;
+  position: relative;
+  overflow: hidden;
+  transition: all 0.3s ease;
+  cursor: pointer;
+
+  &::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: -100%;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(90deg,
+        transparent,
+        rgba(255, 255, 255, 0.4),
+        transparent);
+    transition: left 0.5s ease;
+  }
+
+  &:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 8px 25px rgba(104, 77, 217, 0.3);
+    color: #fff;
+
+    &::before {
+      left: 100%;
+    }
+  }
+
+  &:active {
+    transform: translateY(0);
+    box-shadow: 0 4px 15px rgba(104, 77, 217, 0.2);
+    color: #fff;
+  }
+
+  &:focus {
+    outline: none;
+    box-shadow: 0 0 0 3px rgba(104, 77, 217, 0.3);
+    color: #fff;
+  }
+}
 
 header {
   background: #01101baf;
@@ -308,81 +355,65 @@ header {
     }
   }
 
-  .btn-connect {
-    background: linear-gradient(to right, #684dd9 0%, #00b8b8 100%);
-    color: #fff;
-    border: none;
-    border-radius: 999px;
-    font-size: 14px;
-    position: relative;
-    overflow: hidden;
-    transition: all 0.3s ease;
-    cursor: pointer;
-
-    &::before {
-      content: '';
-      position: absolute;
-      top: 0;
-      left: -100%;
-      width: 100%;
-      height: 100%;
-      background: linear-gradient(90deg,
-          transparent,
-          rgba(255, 255, 255, 0.4),
-          transparent);
-      transition: left 0.5s ease;
-    }
-
-    &:hover {
-      transform: translateY(-2px);
-      box-shadow: 0 8px 25px rgba(104, 77, 217, 0.3);
-      color: #fff;
-
-      &::before {
-        left: 100%;
-      }
-    }
-
-    &:active {
-      transform: translateY(0);
-      box-shadow: 0 4px 15px rgba(104, 77, 217, 0.2);
-      color: #fff;
-    }
-
-    &:focus {
-      outline: none;
-      box-shadow: 0 0 0 3px rgba(104, 77, 217, 0.3);
-      color: #fff;
-    }
-  }
+  
 
   .navbar-nav {
     .nav-item {
       display: flex;
       align-items: center;
       justify-content: center;
+      margin: 0 8px;
 
       @include sm {
         justify-content: start;
         width: 100%;
+        margin: 0;
       }
 
       .nav-link {
-        color: #bcc8c8;
+        color: #BCC8C8;
         font-size: 14px;
+        font-weight: 400;
+        padding: 8px 16px;
+        border-radius: 20px;
+        transition: all 0.3s ease;
+        position: relative;
+        text-decoration: none;
 
         @include sm {
           width: 100%;
-          font-size: 20px;
-          padding: 12px 0;
+          font-size: 16px;
+          padding: 12px 20px;
+          border-radius: 0;
+          border-left: 2px solid transparent;
         }
 
         &:hover {
-          color: #00aeae;
+          color: #00FFFF;
+          background: rgba(0, 174, 174, 0.08);
+          transform: translateY(-1px);
+
+          @include sm {
+            transform: none;
+            border-left-color: #00FFFF;
+            background: rgba(0, 174, 174, 0.05);
+          }
         }
 
         &.active {
-          color: #00aeae;
+          color: #00FFFF;
+          background: rgba(0, 174, 174, 0.12);
+          font-weight: 500;
+
+          @include sm {
+            border-left-color: #00FFFF;
+            background: rgba(0, 174, 174, 0.08);
+          }
+        }
+
+        &:focus {
+          outline: none;
+          box-shadow: 0 0 0 2px rgba(0, 174, 174, 0.2);
         }
       }
     }
@@ -428,21 +459,77 @@ header {
   }
 
   .offcanvas {
-    background: #000202;
+    background: #01101B;
+    border-right: 1px solid rgba(0, 174, 174, 0.15);
+
+    .offcanvas-header {
+      border-bottom: 1px solid rgba(0, 174, 174, 0.1);
+      padding: 15px 20px;
+
+      .btn-close {
+        background: none;
+        border: none;
+        color: #BCC8C8;
+        font-size: 20px;
+        transition: all 0.3s ease;
+
+        &:hover {
+          color: #00FFFF;
+          transform: scale(1.05);
+        }
+      }
+    }
+
+    .offcanvas-body {
+      padding: 15px 0;
+    }
   }
 
   .dropdown-menu {
-    background: #000202;
-    border: 1px solid #47e6ff;
-    border-radius: 10px;
+    background: #01101B;
+    border: 1px solid rgba(0, 174, 174, 0.2);
+    border-radius: 12px;
+    box-shadow: 0 8px 25px rgba(0, 0, 0, 0.2);
+    padding: 6px 0;
+    margin-top: 8px;
 
     .dropdown-item {
-      color: #47e6ff;
+      color: #BCC8C8;
+      padding: 8px 16px;
+      transition: all 0.3s ease;
+      border-radius: 6px;
+      margin: 2px 6px;
+      font-size: 14px;
 
       &:hover {
-        background: #47e6ff;
-        color: #000202;
+        background: rgba(0, 174, 174, 0.1);
+        color: #00FFFF;
       }
+
+      &:active {
+        background: rgba(0, 174, 174, 0.15);
+        color: #00FFFF;
+      }
+    }
+  }
+
+  .navbar-toggler {
+    background: none;
+    border: none;
+    color: #BCC8C8;
+    font-size: 20px;
+    transition: all 0.3s ease;
+    padding: 6px;
+    border-radius: 6px;
+
+    &:hover {
+      color: #00FFFF;
+      background: rgba(0, 174, 174, 0.08);
+    }
+
+    &:focus {
+      outline: none;
+      box-shadow: 0 0 0 2px rgba(0, 174, 174, 0.2);
     }
   }
 }
@@ -483,9 +570,18 @@ section {
   }
 
   .validators {
+    padding-top: 100px;
+    @include sm {
+      padding-top: 0;
+    }
+
     .validators-title {
       color: #fff;
+      font-size: 28px;
       font-family: 'UTM', Times, serif;
+      @include sm {
+        font-size: 18px;
+      }
     }
 
     .validator-dashboard {
@@ -602,6 +698,7 @@ section {
         flex-direction: column;
         justify-content: space-between;
         height: 100%;
+
         @include sm {
           display: block;
           margin-top: 20px;
@@ -730,7 +827,7 @@ section {
         height: auto;
         min-height: 450px;
         border-radius: var(--s);
-        
+
         /* độ rộng của shadow */
         position: relative;
 

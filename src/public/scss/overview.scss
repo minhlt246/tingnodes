@@ -34,6 +34,10 @@
       background: transparent;
       color: #00AEAE;
       border: 2px solid transparent;
+      @include sm {
+        padding-left: 10px !important;
+        padding-right: 10px !important;
+      }
 
       &.active {
         border-color: #6399FF;
