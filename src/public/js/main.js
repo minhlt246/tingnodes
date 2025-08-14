@@ -311,3 +311,16 @@ $.fn.extend({
 
 //Initialization of treeviews
 $('#tree1').treed();
+
+// Overview page functionality
+$('.claim-info-btn').on('click', function() {
+  console.log('Claim Info clicked');
+  // Add your claim info logic here
+  alert('Claim Info functionality will be implemented here');
+});
+
+$('.re-hold-btn').on('click', function() {
+  console.log('Re-Hold clicked');
+  // Add your re-hold logic here
+  alert('Re-Hold functionality will be implemented here');
+});
