@@ -2,20 +2,17 @@ extends _layouts/master
 
 block content
     .overview
-
-        .modal.fade#overviewModal(tabindex="-1" aria-labelledby="overviewModal" aria-hidden="true")
+        #overviewModal.modal.fade(tabindex="-1" aria-labelledby="overviewModal" aria-hidden="true")
             .modal-dialog.modal-dialog-centered
                 .modal-content.overview-modal-content
                     .modal-header.overview-modal-header.py-0.pe-0.align-items-start
                         .overview-validator-header
                             .overview-validator-icon-container
                                 img.overview-validator-icon(src="./client/images/t-cap.png" alt="TCAPY Validator")
-                                
                             .overview-validator-title
                                 span.overview-title-text.px-2 Affirm the leading role in the system
                         button.btn.text-white.overview-close-btn(type='button' data-bs-dismiss='modal' aria-label='Close')      
-                            i.fa-solid.fa-xmark           
-                    
+                            i.fa-solid.fa-xmark          
                     .modal-body.overview-modal-body
                         .overview-stake-form
                             .overview-profit-section
