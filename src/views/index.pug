@@ -32,7 +32,7 @@ block content
                             .form-row
                                 .form-label Amount
                                 .form-input-group
-                                    input#stakeAmount.form-control(type="number" placeholder="Enter amount" min="15000" step="1000")
+                                    input#stakeAmount.form-control(type="number"  min="15000" step="1000")
                                     button.max-btn MAX
 
                             .form-row
@@ -53,15 +53,15 @@ block content
     .modal.fade#holdModal(tabindex="-1" aria-labelledby="holdModal" aria-hidden="true")
             .modal-dialog.modal-dialog-centered
                 .modal-content
-                    .modal-header
+                    .modal-header.py-0.pe-0.align-items-start
                         .validator-header
                             .validator-icon-container
-                                .validator-icon
-                                    img(src="./client/images/t-cap.png" alt="TCAPY Validator")
+                                img.validator-icon(src="./client/images/t-cap.png" alt="TCAPY Validator")
                                 
                             .validator-title
-                                span.title-text Validators hold TCAPY
-                        button.btn-close(type='button' data-bs-dismiss='modal' aria-label='Close')           
+                                span.title-text.px-2 Validators hold TCAPY
+                        button.btn.text-white(type='button' data-bs-dismiss='modal' aria-label='Close')      
+                            i.fa-solid.fa-xmark           
                     
                     .modal-body
                         .stake-form
@@ -80,7 +80,7 @@ block content
                             .form-row
                                 .form-label Amount
                                 .form-input-group
-                                    input#stakeAmount.form-control(type="number" placeholder="Enter amount" min="15000" step="1000")
+                                    input#stakeAmount.form-control(type="number"  min="15000" step="1000")
                                     button.max-btn MAX
 
                             .form-row

@@ -11,18 +11,67 @@ block content
                             .text-title.text-gradient.text-center.mb-2 Affirm the leading role in the system
                             .text-center.mb-3 Introduce it today and join forces to develop the decentralized STAKING system
                             .input-group.mb-3
-                                input.form-control(type="text" value="https://www.google.com.vn/?hl=vijakldiwiklnauo" aria-label="Recipient’s username" aria-describedby="basic-addon2")
+                                input.form-control(type="text" value="https://www.google.com.vn/?hl=vijakldiwiklnauo" aria-label="Recipient's username" aria-describedby="basic-addon2")
                                 span.input-group-text
                                     button.btn.border-0.px-4.py-0.text-white Copy
+        
         .overview-main.pb-4
             .container 
                 ul.nav.nav-pills.overview-tag.tag-banner.mb-3.justify-content-center(role="tablist")
                     li.nav-item(role="presentation")
-                        button.nav-link.active(data-bs-toggle="pill" data-bs-target="#system" type="button" role="tab" aria-controls="pills-home" aria-selected="true") MY SYSTEM
+                        button.nav-link.active(data-bs-toggle="pill" data-bs-target="#validator" type="button" role="tab" aria-controls="pills-home" aria-selected="true") MY VALIVATOR
+                    li.nav-item(role="presentation")
+                        button.nav-link(data-bs-toggle="pill" data-bs-target="#system" type="button" role="tab" aria-controls="pills-home" aria-selected="true") MY SYSTEM
                     li.nav-item(role="presentation")
                         button.nav-link(data-bs-toggle="pill" data-bs-target="#commission" type="button" role="tab" aria-controls="pills-profile" aria-selected="false") MY COMMISSION
+                
                 .tab-content
-                    #system.tab-pane.fade.show.active(role="tabpanel", aria-labelledby="pills-home-tab", tabindex="0") 
+                    #validator.tab-pane.fade.show.active(role="tabpanel", aria-labelledby="pills-home-tab", tabindex="0") 
+                        .validator-cards-container
+                            .row.justify-content-center
+                                .col-lg-8.col-md-10.mx-auto
+                                    .validator-card
+                                        .validator-card-left
+                                            .validator-icon-container
+                                                img.validator-icon(src="./client/images/t-cap.png" alt="TCAPY Validator")
+                                            .validator-actions
+                                                button.claim-info-btn CLAIM INFO
+                                                button.re-validator-btn RE-HOLD
+                                        
+                                        .validator-card-right
+                                            .validator-metrics
+                                                .metric-row
+                                                    .metric-label My Hold
+                                                    .metric-value 5 TING
+                                                
+                                                .metric-row
+                                                    .metric-label Max Out
+                                                    .metric-value 20 TING
+                                                
+                                                .metric-row
+                                                    .metric-label Reward
+                                                    .metric-value 1 TING
+                                                
+                                                .metric-row
+                                                    .metric-label Commission
+                                                    .metric-value 5 TING
+                                                
+                                                .metric-row.period-row
+                                                    .period-item
+                                                        .period-label Period
+                                                        .period-value 3 months
+                                                    .period-item
+                                                        .period-label Date Create
+                                                        .period-value 08/08/2025
+                                                    .period-item
+                                                        .period-label Exp
+                                                        .period-value 08/08/2026
+                                                
+                                                .metric-row.total-row
+                                                    a.metric-label-t(href="javascript:void(0)") Total System Hold
+                                                    .metric-value.total-value 8 TING
+                    
+                    #system.tab-pane.fade(role="tabpanel", aria-labelledby="pills-home-tab", tabindex="0") 
                         .table-border
                             .table-responsive
                                 table.table.table-striped.mb-0
@@ -37,6 +86,7 @@ block content
                                                 td 0x1234567890abcdef
                                                 td 10 TCAPY
                                                 td.text-end F1
+                    
                     #commission.tab-pane.fade(role="tabpanel", aria-labelledby="pills-profile-tab", tabindex="0") 
                         .table-border
                             .table-responsive
