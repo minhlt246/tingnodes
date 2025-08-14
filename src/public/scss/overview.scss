@@ -39,7 +39,7 @@
     }
   }
   .validator-cards-container {
-    padding: 40px 0;
+   
     .validator-card {
       background: #01101B;
       border-radius: 20px;
@@ -50,9 +50,9 @@
       border: 2px solid #00AEAE;
       
       @include sm {
-        flex-direction: column;
-        padding: 30px 20px;
-        gap: 30px;
+        width: auto;
+        display: block;
+        padding-bottom: 6px;
       }
     
       // Glow effect
@@ -66,16 +66,7 @@
         opacity: 0.5;
         z-index: 0;
         pointer-events: none;
-        clip-path: polygon(-100vmax -100vmax,
-            100vmax -100vmax,
-            100vmax 100vmax,
-            -100vmax 100vmax,
-            -100vmax -100vmax,
-            calc(0px + 10px) calc(0px + 10px),
-            calc(0px + 10px) calc(100% - 10px),
-            calc(100% - 10px) calc(100% - 10px),
-            calc(100% - 10px) calc(0px + 10px),
-            calc(0px + 10px) calc(0px + 10px));
+        clip-path: polygon(-100vmax -100vmax, 100vmax -100vmax, 100vmax 100vmax, -100vmax 100vmax, -100vmax -100vmax, calc(0px + var(--s)) calc(0px + var(--s)), calc(0px + var(--s)) calc(100% - var(--s)), calc(100% - var(--s)) calc(100% - var(--s)), calc(100% - var(--s)) calc(0px + var(--s)), calc(0px + var(--s)) calc(0px + var(--s)));
       }
     
       > * {
@@ -161,7 +152,8 @@
           }
     
           .claim-info-btn {
-            background: linear-gradient(90deg, #a48eff 0%, #684DD9 100%);
+            background: #684DD9;
+            background: linear-gradient(90deg,rgba(104, 77, 217, 1) 0%, rgba(0, 184, 184, 1) 100%);
             box-shadow: 0 4px 15px rgba(164, 142, 255, 0.3);
     
             &:hover {
@@ -170,7 +162,8 @@
           }
     
           .re-validator-btn {
-            background: linear-gradient(90deg, #00AEAE 0%, #009393 100%);
+            background: #3399CC;
+            background: linear-gradient(90deg,rgba(51, 153, 204, 1) 0%, rgba(0, 204, 204, 1) 100%);
             box-shadow: 0 4px 15px rgba(0, 191, 174, 0.3);
     
             &:hover {
@@ -192,8 +185,7 @@
             justify-content: space-between;
             align-items: center;
             padding: 12px 0;
-            border-bottom: 2px solid #009393;
-    
+            
             &:last-child {
               border-bottom: none;
             }
@@ -213,31 +205,44 @@
               font-size: 14px;
               font-weight: 300;
     
-              &.total-value {
+              .total-value {
                 color: #00bfae;
                 text-decoration: underline;
                 cursor: pointer;
-                font-weight: 600;
+                font-weight: 300;
     
                 &:hover {
                   color: #00ffff;
                 }
               }
             }
+            .metric-value-t {
+              color: #FFFFFF;
+              font-size: 14px;
+              font-weight: 300;
     
+            }
+            .metric-value-t {
+              color: #00FFFF;
+              font-size: 14px;
+              font-weight: 300;
+    
+            }
             &.period-row {
               margin: 20px 0;
+             @include sm {
+              margin:  0;
+             }
+              border-radius: 8px;
               
               display: flex;
               overflow: hidden;
     
-              @include sm {
-                flex-direction: column;
-              }
+              
     
               .period-item {
                 flex: 1;
-                padding: 15px;
+                padding: 0;
                 text-align: center;
                 position: relative;
     
@@ -268,15 +273,19 @@
                 }
               }
             }
-    
-            &.total-row {
-              margin-top: 20px;
-              padding-top: 20px;
-             
-            }
           }
         }
       }
+    }
+  }
+  #overviewModal{
+    .overview-modal-content{
+      background: #01101B;
+      border-radius: 20px;
+      padding: 40px;
+      display: flex;
+      gap: 50px;
+
     }
   }
 }
