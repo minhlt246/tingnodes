@@ -681,7 +681,7 @@ section {
 
 }
 
-// Modal Styles
+
 #stakeModal {
   .modal-dialog {
     .modal-content {
@@ -775,19 +775,19 @@ section {
               font-weight: bold;
               font-size: 18px;
             }
+            // Separator line
+            &::after {
+              content: '';
+              position: absolute;
+              bottom: 0;
+              right: 30px;
+              background: #00bfae;
+              width: 80%;
+              left: 20%;
+            }
           }
         }
         
-        // Separator line
-        &::after {
-          content: '';
-          position: absolute;
-          bottom: 0;
-          right: 30px;
-          background: #00bfae;
-          width: 80%;
-          left: 20%;
-        }
       }
 
       .modal-body {
@@ -1006,19 +1006,21 @@ section {
               font-weight: bold;
               font-size: 18px;
             }
+            // Separator line
+            &::after {
+              content: '';
+              position: absolute;
+              bottom: 0;
+              right: 30px;
+              background: #00bfae;
+              width: 80%;
+              left: 20%;
+              z-index: 2;
+            }
           }
         }
         
-        // Separator line
-        &::after {
-          content: '';
-          position: absolute;
-          bottom: 0;
-          right: 30px;
-          background: #00bfae;
-          width: 80%;
-          left: 20%;
-        }
+        
       }
 
       .modal-body {
@@ -1145,5 +1147,5 @@ section {
   }
 }
 
-// Val
+
 

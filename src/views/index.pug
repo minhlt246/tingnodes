@@ -48,8 +48,7 @@ block content
                                 .form-value.apy-value 5%
 
                     .modal-footer
-                        button.stake-confirm-btn HOLD
-
+                        button.stake-confirm-btn STAKE
         .modal.fade#holdModal(tabindex="-1" aria-labelledby="holdModal" aria-hidden="true")
             .modal-dialog.modal-dialog-centered
                 .modal-content
@@ -143,7 +142,7 @@ block content
                                         .metric-value.holders 15,000
 
                                 .validator-action
-                                    button.hold-button(data-bs-toggle="modal" data-bs-target="#stakeModal") HOLD
+                                    button.hold-button(data-bs-toggle="modal" data-bs-target="#stakeModal") STAKE
 
                 .col-lg-6.col-md-6.col-sm-12.d-flex.justify-content-center.align-items-center.pt-3
                     .validator-dashboard
@@ -174,7 +173,7 @@ block content
                                         .metric-value.holders 15,000
 
                                 .validator-action
-                                    button.stake-button(data-bs-toggle="modal" data-bs-target="#holdModal") STAKE
+                                    button.stake-button(data-bs-toggle="modal" data-bs-target="#holdModal") HOLD
 
 
 
