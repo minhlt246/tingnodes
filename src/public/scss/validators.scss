@@ -2,6 +2,8 @@
 @use "./galaxy.scss" as galaxy;
 
 .validators-page {
+  background: url(../images/valiator-bg.png) no-repeat center center;
+  background-size: cover;
   .validators-title {
     font-size: 28px;
     text-align: center;

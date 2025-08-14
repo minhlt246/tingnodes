@@ -13,10 +13,10 @@ html
         link(rel='stylesheet' href='client/css/all.min.css')
         link(rel='stylesheet' href='client/css/hover-min.css')
         link(rel='stylesheet' href='client/css/flag-icons.min.css')
+        link(rel='stylesheet' href='client/wow/animate.css')
         link(rel='stylesheet' href='client/css/style.css')
         link(rel='stylesheet' href='client/slick/slick.css')
         link(rel='stylesheet' href='client/fonts/fontstyle.css')
-        link(rel='stylesheet' href='client/scss/overview.css')
 
 
     body
@@ -31,12 +31,20 @@ html
         script(src="http://cdn.jsdelivr.net/particles.js/2.0.0/particles.min.js")
         script(src="http://threejs.org/examples/js/libs/stats.min.js")
         script(src='client/js/particlesjs-config.js') 
-        //script(src='client/js/moment.js')
+        script(src='client/wow/wow.min.js')
         //- script(src='client/slick/slick.js')
         script(src='client/js/main.js')
         //- script(src='client/js/validate.js')
 
         script.
+            new WOW().init(
+                {
+                    offset: 100,
+                    mobile: true,
+                    live: true
+                }
+            );
+            
 
             $(function () {
                 if ($(window).width() > 769) {
