@@ -2,6 +2,53 @@ extends _layouts/master
 
 block content
     .overview
+
+        .modal.fade#overviewModal(tabindex="-1" aria-labelledby="overviewModal" aria-hidden="true")
+            .modal-dialog.modal-dialog-centered
+                .modal-content.overview-modal-content
+                    .modal-header.overview-modal-header.py-0.pe-0.align-items-start
+                        .overview-validator-header
+                            .overview-validator-icon-container
+                                img.overview-validator-icon(src="./client/images/t-cap.png" alt="TCAPY Validator")
+                                
+                            .overview-validator-title
+                                span.overview-title-text.px-2 Affirm the leading role in the system
+                        button.btn.text-white.overview-close-btn(type='button' data-bs-dismiss='modal' aria-label='Close')      
+                            i.fa-solid.fa-xmark           
+                    
+                    .modal-body.overview-modal-body
+                        .overview-stake-form
+                            .overview-profit-section
+                                .overview-section-title PROFIT
+                                .overview-data-row
+                                    .overview-data-label Total Profit
+                                    .overview-data-value 1,000 TCAPY
+                                .overview-data-row
+                                    .overview-data-label Claimed
+                                    .overview-data-value 1,000 TCAPY
+                                .overview-data-row
+                                    .overview-data-label Available
+                                    .overview-data-value 1,000 TCAPY
+                                button.overview-claim-btn CLAIM
+
+                            .overview-bonus-section
+                                .overview-section-title BONUS
+                                .overview-data-row
+                                    .overview-data-label Total Profit
+                                    .overview-data-value 1,000 TCAPY
+                                .overview-data-row
+                                    .overview-data-label Claimed
+                                    .overview-data-value 1,000 TCAPY
+                                .overview-data-row
+                                    .overview-data-label Available
+                                    .overview-data-value 1,000 TCAPY
+                                button.overview-claim-btn CLAIM
+
+                    .modal-footer.overview-modal-footer
+                        .overview-bottom-info
+                            .overview-bottom-left 8 TCAPY
+                            .overview-bottom-right Total System Hold
+        
         .overview-banner
             #particles-js
             .banner-content
@@ -29,11 +76,53 @@ block content
                     #validator.tab-pane.fade.show.active(role="tabpanel", aria-labelledby="pills-home-tab", tabindex="0") 
                         .validator-cards-container
                             .row.justify-content-center
-                                .col-lg-8.col-md-10.mx-auto
+                                .col-lg-8.col-md-10.col-sm-12.mx-auto.mb-2
                                     .validator-card
                                         .validator-card-left
                                             .validator-icon-container
                                                 img.validator-icon(src="./client/images/t-cap.png" alt="TCAPY Validator")
+                                            .validator-actions
+                                                button.btn.claim-info-btn(data-bs-toggle="modal" data-bs-target="#overviewModal") CLAIM INFO
+                                                button.btn.re-validator-btn RE-HOLD
+                                        
+                                        .validator-card-right
+                                            .validator-metrics
+                                                .metric-row
+                                                    .metric-label My Hold
+                                                    .metric-value 5 TING
+                                                
+                                                .metric-row
+                                                    .metric-label Max Out
+                                                    .metric-value 20 TING
+                                                
+                                                .metric-row
+                                                    .metric-label Reward
+                                                    .metric-value 1 TING
+                                                
+                                                .metric-row
+                                                    .metric-label Commission
+                                                    .metric-value 5 TING
+                                                
+                                                .metric-row.period-row
+                                                    .period-item
+                                                        .period-label Period
+                                                        .period-value 3 months
+                                                    .period-item
+                                                        .period-label Date Create
+                                                        .period-value 08/08/2025
+                                                    .period-item
+                                                        .period-label Exp
+                                                        .period-value 08/08/2026
+                                                
+                                                .metric-row.total-row
+                                                    a.metric-label-t(href="javascript:void(0)") Total System Hold
+                                                    .metric-value-t      8 TING
+
+                                .col-lg-8.col-md-10.col-sm-12.mx-auto.my-3
+                                    .validator-card
+                                        .validator-card-left
+                                            .validator-icon-container
+                                                img.validator-icon(src="./client/images/t-cap-1.png" alt="TCAPY Validator")
                                             .validator-actions
                                                 button.claim-info-btn CLAIM INFO
                                                 button.re-validator-btn RE-HOLD
@@ -69,7 +158,8 @@ block content
                                                 
                                                 .metric-row.total-row
                                                     a.metric-label-t(href="javascript:void(0)") Total System Hold
-                                                    .metric-value.total-value 8 TING
+                                                    .metric-value-t      8 TING
+
                     
                     #system.tab-pane.fade(role="tabpanel", aria-labelledby="pills-home-tab", tabindex="0") 
                         .table-border
