@@ -1,13 +1,16 @@
 @use "./breakpoint.scss" as *;
 @use "./galaxy.scss" as galaxy;
 
-.validators {
+.validators-page {
   .validators-title {
-    font-size: 30px;
-    font-weight: 600;
+    font-size: 28px;
     text-align: center;
     font-family: 'UTM', Times, serif;
-    padding: 40px 0;
+    padding: 100px 0;
+    @include sm {
+      font-size: 23px;
+      padding: 10px 0;
+    }
   }
   
 }
