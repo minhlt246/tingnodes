@@ -1,7 +1,7 @@
 header.fixed-top
     nav.navbar.navbar-expand-lg.py-0
         .container.d-flex.justify-content-between.px-2.py-2.py-lg-0
-            a.navbar-brand(href='javascript:void(0)')
+            a.navbar-brand(href='index.html')
                 img.img-logo(src="client/images/logo.png" alt="")
             #menu.offcanvas.offcanvas-start(tabindex='-1' aria-labelledby='offcanvasNavbarLabel')
                 .offcanvas-header
@@ -10,9 +10,9 @@ header.fixed-top
                     button.btn.p-0.border-0.text-white(type='button' data-bs-dismiss='offcanvas' aria-label='Close')
                         i.fa-solid.fa-xmark.fa-2x
                 .offcanvas-body
-                    ul.navbar-nav.ms-auto
+                    ul.navbar-nav.ms-auto.nav-menu
                         li.nav-item(data-bs-dismiss='offcanvas')
-                            a.nav-link.me-lg-3.active(href='index.html') Dashboard
+                            a.nav-link.me-lg-3(href='index.html') Dashboard
                         li.nav-item(data-bs-dismiss='offcanvas')
                             a.nav-link.me-lg-3(href='validators.html') Validator
                         li.nav-item(data-bs-dismiss='offcanvas')

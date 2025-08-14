@@ -3,7 +3,7 @@
 
 .overview {
   .overview-modal-content {
-    border: 2px solid #009393;
+    border: 1px solid #009393;
     background: #01101B;
     border-radius: 10px;
     position: relative;
@@ -18,6 +18,47 @@
       background: conic-gradient(from 90deg at 40% -25%, #00B8B8, #684DD9 50%);
       filter: blur(20px);
       border-radius: inherit;
+    }
+
+    .overview-modal-header {
+      margin-top: -80px;
+      @include sm {
+        margin-top: 0px;
+      }
+      .img-validator {
+        width: 100%;
+        padding: 10px;
+        background: #01101B;
+        border-radius: 50%;
+
+        img {
+          width: 100%;
+          height: 100%;
+          object-fit: cover;
+        }
+      }
+    }
+    .overview-stake{
+      .stake-title{
+        font-size: 24px;
+        font-family: "UTM", sans-serif;
+        position: relative;
+        &::before{
+          content: "";
+          position: absolute;
+          bottom: 0;
+          left: 0;
+          width: 100%;
+          height: 1px;
+          background: #6399FF;
+        }
+      }
+      .stake-item-value{
+        color: #00FFFF;
+      }
+      .stake-item-symbol{
+        color: #FFFFFF;
+      }
     }
   }
 
@@ -38,6 +79,9 @@
       z-index: 2;
       background: linear-gradient(to bottom, rgba(0, 0, 0, 0) 0%, #01101b43 80%);
       padding: 150px 0;
+      @include sm {
+        padding: 110px 0;
+      }
     }
   }
 
@@ -45,7 +89,7 @@
     padding: 40px 0;
 
     .validator-card {
-      padding: 40px;
+      padding: 30px 40px;
       display: flex;
       gap: 50px;
       position: relative;
@@ -132,7 +176,6 @@
           .claim-info-btn,
           .re-validator-btn {
             width: 100%;
-            padding: 12px 20px;
             border: none;
             border-radius: 25px;
             font-size: 14px;
@@ -186,6 +229,7 @@
             align-items: center;
             padding: 12px 0;
             border-bottom: 2px solid #009393;
+
             &:last-child {
               border-bottom: none;
             }
@@ -234,16 +278,12 @@
             }
 
             &.period-row {
-              margin: 20px 0;
-
               display: flex;
               overflow: hidden;
 
-
-
               .period-item {
                 flex: 1;
-                padding: 15px;
+                padding: 10px;
                 text-align: center;
                 position: relative;
 
@@ -276,9 +316,7 @@
             }
 
             &.total-row {
-              margin-top: 20px;
-              padding-top: 20px;
-
+              padding-top: 10px;
             }
           }
         }
@@ -289,6 +327,9 @@
 
 .tag-banner {
   transform: translateY(-70px);
+  @include sm {
+    transform: translateY(-10px);
+  }
 }
 
 .overview-tag {

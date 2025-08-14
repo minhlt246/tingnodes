@@ -5,47 +5,60 @@ block content
         #overviewModal.modal.fade(tabindex="-1" aria-labelledby="overviewModal" aria-hidden="true")
             .modal-dialog.modal-dialog-centered
                 .modal-content.overview-modal-content
-                    .modal-header.overview-modal-header.py-0.pe-0.align-items-start
-                        .overview-validator-header
-                            .overview-validator-icon-container
-                                img.overview-validator-icon(src="./client/images/t-cap.png" alt="TCAPY Validator")
-                            .overview-validator-title
-                                span.overview-title-text.px-2 Affirm the leading role in the system
-                        button.btn.text-white.overview-close-btn(type='button' data-bs-dismiss='modal' aria-label='Close')      
-                            i.fa-solid.fa-xmark          
-                    .modal-body.overview-modal-body
-                        .overview-stake-form
-                            .overview-profit-section
-                                .overview-section-title PROFIT
-                                .overview-data-row
-                                    .overview-data-label Total Profit
-                                    .overview-data-value 1,000 TCAPY
-                                .overview-data-row
-                                    .overview-data-label Claimed
-                                    .overview-data-value 1,000 TCAPY
-                                .overview-data-row
-                                    .overview-data-label Available
-                                    .overview-data-value 1,000 TCAPY
-                                button.overview-claim-btn CLAIM
+                    .modal-body.px-5.position-relative
+                        .position-absolute.top-0.end-0
+                            button.btn.text-white.border-0(type='button' data-bs-dismiss='modal' aria-label='Close')      
+                                i.fa-solid.fa-xmark          
+                        .overview-modal-header
+                            .row
+                                .col-5.col-lg-4.mx-auto
+                                    .img-validator
+                                        img(src="./client/images/t-cap.png" alt="TCAPY Validator")
+                        .overview-stake
+                            .stake-title.text-center.text-gradient.py-2.mb-3 Reward
+                            .d-flex.justify-content-between.align-items-center.py-2
+                                .stake-item
+                                    | Total Reward
+                                .d-flex
+                                    .stake-item-value.me-2 1000
+                                    .stake-item-symbol TCAPY
+                            .d-flex.justify-content-between.align-items-center.py-2
+                                .stake-item
+                                    | Claimed
+                                .d-flex
+                                    .stake-item-value.me-2 1000
+                                    .stake-item-symbol TCAPY
+                            .d-flex.justify-content-between.align-items-center.py-2
+                                .stake-item
+                                    | Available
+                                .d-flex
+                                    .stake-item-value.me-2 1000
+                                    .stake-item-symbol TCAPY   
+                            .py-3 
+                                button.btn.btn-connect.w-100 CLAIM
+                            .stake-title.text-center.text-gradient.py-2.mb-3 Bonus
+                            .d-flex.justify-content-between.align-items-center.py-2
+                                .stake-item
+                                    | Total Reward
+                                .d-flex
+                                    .stake-item-value.me-2 1000
+                                    .stake-item-symbol TCAPY
+                            .d-flex.justify-content-between.align-items-center.py-2
+                                .stake-item
+                                    | Claimed
+                                .d-flex
+                                    .stake-item-value.me-2 1000
+                                    .stake-item-symbol TCAPY
+                            .d-flex.justify-content-between.align-items-center.py-2
+                                .stake-item
+                                    | Available
+                                .d-flex
+                                    .stake-item-value.me-2 1000
+                                    .stake-item-symbol TCAPY   
+                            .py-3 
+                                button.btn.btn-connect.w-100 CLAIM    
 
-                            .overview-bonus-section
-                                .overview-section-title BONUS
-                                .overview-data-row
-                                    .overview-data-label Total Profit
-                                    .overview-data-value 1,000 TCAPY
-                                .overview-data-row
-                                    .overview-data-label Claimed
-                                    .overview-data-value 1,000 TCAPY
-                                .overview-data-row
-                                    .overview-data-label Available
-                                    .overview-data-value 1,000 TCAPY
-                                button.overview-claim-btn CLAIM
 
-                    .modal-footer.overview-modal-footer
-                        .overview-bottom-info
-                            .overview-bottom-left 8 TCAPY
-                            .overview-bottom-right Total System Hold
-        
         .overview-banner
             #particles-js
             .banner-content
@@ -58,7 +71,7 @@ block content
                                 input.form-control(type="text" value="https://www.google.com.vn/?hl=vijakldiwiklnauo" aria-label="Recipient's username" aria-describedby="basic-addon2")
                                 span.input-group-text
                                     button.btn.border-0.px-4.py-0.text-white Copy
-        
+
         .overview-main.pb-4
             .container 
                 ul.nav.nav-pills.overview-tag.tag-banner.mb-3.justify-content-center(role="tablist")
@@ -68,9 +81,9 @@ block content
                         button.nav-link(data-bs-toggle="pill" data-bs-target="#system" type="button" role="tab" aria-controls="pills-home" aria-selected="true") MY SYSTEM
                     li.nav-item(role="presentation")
                         button.nav-link(data-bs-toggle="pill" data-bs-target="#commission" type="button" role="tab" aria-controls="pills-profile" aria-selected="false") MY COMMISSION
-                
+
                 .tab-content
-                    #validator.tab-pane.fade.show.active(role="tabpanel", aria-labelledby="pills-home-tab", tabindex="0") 
+                    #validator.tab-pane.fade.show.active(role="tabpanel" aria-labelledby="pills-home-tab" tabindex="0") 
                         .validator-cards-container
                             .row.justify-content-center
                                 .col-lg-8.col-md-10.col-sm-12.mx-auto.mb-2
@@ -81,25 +94,25 @@ block content
                                             .validator-actions
                                                 button.btn.claim-info-btn(data-bs-toggle="modal" data-bs-target="#overviewModal") CLAIM INFO
                                                 button.btn.re-validator-btn RE-HOLD
-                                        
+
                                         .validator-card-right
                                             .validator-metrics
                                                 .metric-row
                                                     .metric-label My Hold
-                                                    .metric-value 5 TING
-                                                
+                                                    .metric-value 5 TCAPY
+
                                                 .metric-row
                                                     .metric-label Max Out
-                                                    .metric-value 20 TING
-                                                
+                                                    .metric-value 20 TCAPY
+
                                                 .metric-row
                                                     .metric-label Reward
-                                                    .metric-value 1 TING
-                                                
+                                                    .metric-value 1 TCAPY
+
                                                 .metric-row
                                                     .metric-label Commission
-                                                    .metric-value 5 TING
-                                                
+                                                    .metric-value 5 TCAPY
+
                                                 .metric-row.period-row
                                                     .period-item
                                                         .period-label Period
@@ -110,10 +123,10 @@ block content
                                                     .period-item
                                                         .period-label Exp
                                                         .period-value 08/08/2026
-                                                
+
                                                 .metric-row.total-row
                                                     a.metric-label-t(href="javascript:void(0)") Total System Hold
-                                                    .metric-value-t      8 TING
+                                                    .metric-value-t 8 TCAPY
 
                                 .col-lg-8.col-md-10.col-sm-12.mx-auto.my-3
                                     .validator-card
@@ -121,27 +134,27 @@ block content
                                             .validator-icon-container
                                                 img.validator-icon(src="./client/images/t-cap-1.png" alt="TCAPY Validator")
                                             .validator-actions
-                                                button.claim-info-btn CLAIM INFO
-                                                button.re-validator-btn RE-HOLD
-                                        
+                                                button.btn.claim-info-btn(data-bs-toggle="modal" data-bs-target="#overviewModal") CLAIM INFO
+                                                button.btn.re-validator-btn RE-HOLD
+
                                         .validator-card-right
                                             .validator-metrics
                                                 .metric-row
                                                     .metric-label My Hold
                                                     .metric-value 5 TING
-                                                
+
                                                 .metric-row
                                                     .metric-label Max Out
                                                     .metric-value 20 TING
-                                                
+
                                                 .metric-row
                                                     .metric-label Reward
                                                     .metric-value 1 TING
-                                                
+
                                                 .metric-row
                                                     .metric-label Commission
                                                     .metric-value 5 TING
-                                                
+
                                                 .metric-row.period-row
                                                     .period-item
                                                         .period-label Period
@@ -152,13 +165,13 @@ block content
                                                     .period-item
                                                         .period-label Exp
                                                         .period-value 08/08/2026
-                                                
+
                                                 .metric-row.total-row
                                                     a.metric-label-t(href="javascript:void(0)") Total System Hold
                                                     .metric-value-t      8 TING
 
-                    
-                    #system.tab-pane.fade(role="tabpanel", aria-labelledby="pills-home-tab", tabindex="0") 
+
+                    #system.tab-pane.fade(role="tabpanel" aria-labelledby="pills-home-tab" tabindex="0") 
                         .table-border
                             .table-responsive
                                 table.table.table-striped.mb-0
@@ -168,13 +181,13 @@ block content
                                             th Hold
                                             th.text-end Floor
                                     tbody
-                                         -for (let i = 0; i < 5; i++)
+                                        -for (let i = 0; i < 5; i++)
                                             tr
                                                 td 0x1234567890abcdef
                                                 td 10 TCAPY
                                                 td.text-end F1
-                    
-                    #commission.tab-pane.fade(role="tabpanel", aria-labelledby="pills-profile-tab", tabindex="0") 
+
+                    #commission.tab-pane.fade(role="tabpanel" aria-labelledby="pills-profile-tab" tabindex="0") 
                         .table-border
                             .table-responsive
                                 table.table.table-striped.mb-0
