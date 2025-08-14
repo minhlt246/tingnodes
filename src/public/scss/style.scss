@@ -594,22 +594,24 @@ section {
       border-radius: 10px;
       padding: 30px;
       position: relative;
-      transform: translate(0);
-      transform-style: preserve-3d;
       display: flex;
+
+      /* Đảm bảo background hiển thị trên Safari cũ */
+      -webkit-background-color: #01101B;
+      background-color: #01101B;
+
+      /* Shadow gradient tương thích Safari cũ */
+      box-shadow:
+        0 0 20px rgba(0, 184, 184, 0.3),
+        0 0 40px rgba(104, 77, 217, 0.2),
+        inset 0 0 20px rgba(0, 184, 184, 0.1);
+      -webkit-box-shadow:
+        0 0 20px rgba(0, 184, 184, 0.3),
+        0 0 40px rgba(104, 77, 217, 0.2),
+        inset 0 0 20px rgba(0, 184, 184, 0.1);
 
       @include sm {
         display: block;
-      }
-
-      &::before {
-        content: "";
-        position: absolute;
-        inset: -5px;
-        transform: translate3d(0px, 0px, -1px);
-        background: conic-gradient(from 90deg at 40% -25%, #00B8B8, #684DD9 50%);
-        filter: blur(20px);
-        border-radius: inherit;
       }
 
       .validator-left {
@@ -807,19 +809,20 @@ section {
         background: #01101B;
         border-radius: 10px;
         position: relative;
-        transform: translate(0);
-        transform-style: preserve-3d;
-        position: relative;
 
-        &::before {
-          content: "";
-          position: absolute;
-          inset: -5px;
-          transform: translate3d(0px, 0px, -1px);
-          background: conic-gradient(from 90deg at 40% -25%, #00B8B8, #684DD9 50%);
-          filter: blur(20px);
-          border-radius: inherit;
-        }
+        /* Đảm bảo background hiển thị trên Safari cũ */
+        -webkit-background-color: #01101B;
+        background-color: #01101B;
+
+        /* Shadow gradient tương thích Safari cũ */
+        box-shadow:
+          0 0 25px rgba(0, 184, 184, 0.4),
+          0 0 50px rgba(104, 77, 217, 0.3),
+          inset 0 0 25px rgba(0, 184, 184, 0.1);
+        -webkit-box-shadow:
+          0 0 25px rgba(0, 184, 184, 0.4),
+          0 0 50px rgba(104, 77, 217, 0.3),
+          inset 0 0 25px rgba(0, 184, 184, 0.1);
 
         .modal-header {
           border-bottom: none;
@@ -1050,19 +1053,20 @@ section {
         background: #01101B;
         border-radius: 10px;
         position: relative;
-        transform: translate(0);
-        transform-style: preserve-3d;
-        position: relative;
 
-        &::before {
-          content: "";
-          position: absolute;
-          inset: -5px;
-          transform: translate3d(0px, 0px, -1px);
-          background: conic-gradient(from 90deg at 40% -25%, #00B8B8, #684DD9 50%);
-          filter: blur(20px);
-          border-radius: inherit;
-        }
+        /* Đảm bảo background hiển thị trên Safari cũ */
+        -webkit-background-color: #01101B;
+        background-color: #01101B;
+
+        /* Shadow gradient tương thích Safari cũ */
+        box-shadow:
+          0 0 25px rgba(0, 184, 184, 0.4),
+          0 0 50px rgba(104, 77, 217, 0.3),
+          inset 0 0 25px rgba(0, 184, 184, 0.1);
+        -webkit-box-shadow:
+          0 0 25px rgba(0, 184, 184, 0.4),
+          0 0 50px rgba(104, 77, 217, 0.3),
+          inset 0 0 25px rgba(0, 184, 184, 0.1);
 
         .modal-header {
           border-bottom: none;
