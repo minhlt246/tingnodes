@@ -2,279 +2,299 @@
 @use "./galaxy.scss" as galaxy;
 
 .overview {
+  .overview-modal-content {
+    border: 2px solid #009393;
+    background: #01101B;
+    border-radius: 10px;
+    position: relative;
+    transform: translate(0);
+    transform-style: preserve-3d;
+
+    &::before {
+      content: "";
+      position: absolute;
+      inset: -5px;
+      transform: translate3d(0px, 0px, -1px);
+      background: conic-gradient(from 90deg at 40% -25%, #00B8B8, #684DD9 50%);
+      filter: blur(20px);
+      border-radius: inherit;
+    }
+  }
+
   .overview-banner {
     position: relative;
-    #particles-js{
+
+    #particles-js {
       position: absolute;
-      width:100%;
-      height:100%;
-      left:0;
-      top:0;
+      width: 100%;
+      height: 100%;
+      left: 0;
+      top: 0;
       z-index: 1;
     }
-    .banner-content{
+
+    .banner-content {
       position: relative;
       z-index: 2;
       background: linear-gradient(to bottom, rgba(0, 0, 0, 0) 0%, #01101b43 80%);
       padding: 150px 0;
     }
   }
-    .validator-cards-container {
-      padding: 40px 0;
-  
-      .validator-card {
-        background: #01101B;
-        border-radius: 20px;
-        padding: 40px;
+
+  .validator-cards-container {
+    padding: 40px 0;
+
+    .validator-card {
+      padding: 40px;
+      display: flex;
+      gap: 50px;
+      position: relative;
+      border: 2px solid #009393;
+      background: #01101B;
+      border-radius: 10px;
+      position: relative;
+      transform: translate(0);
+      transform-style: preserve-3d;
+
+
+      @include sm {
+        width: auto;
+        display: block;
+      }
+
+      // Glow effect
+      &::before {
+        content: "";
+        position: absolute;
+        inset: -5px;
+        transform: translate3d(0px, 0px, -1px);
+        background: conic-gradient(from 90deg at 40% -25%, #00B8B8, #684DD9 50%);
+        filter: blur(20px);
+        border-radius: inherit;
+      }
+
+      .validator-card-left {
         display: flex;
-        gap: 50px;
-        position: relative;
-        border: 2px solid #00AEAE;
-  
+        flex-direction: column;
+        align-items: center;
+        gap: 30px;
+        min-width: 200px;
+
         @include sm {
-          width: auto;
-          display: block;
+          min-width: auto;
         }
-  
-        // Glow effect
-        &::before {
-          content: "";
-          position: absolute;
-          inset: -8px;
-          border-radius: 28px;
-          background: linear-gradient(90deg, #a48eff, #00ffff);
-          filter: blur(16px);
-          opacity: 0.5;
-          z-index: 0;
-          pointer-events: none;
-          clip-path: polygon(-100vmax -100vmax, 100vmax -100vmax, 100vmax 100vmax, -100vmax 100vmax, -100vmax -100vmax, calc(0px + var(--s)) calc(0px + var(--s)), calc(0px + var(--s)) calc(100% - var(--s)), calc(100% - var(--s)) calc(100% - var(--s)), calc(100% - var(--s)) calc(0px + var(--s)), calc(0px + var(--s)) calc(0px + var(--s)));
-        }
-  
-        >* {
+
+        .validator-icon-container {
           position: relative;
+          width: 170px;
+          height: 170px;
+          padding: 15%;
+          border-radius: 50%;
+          background: #01101B;
+          border: 3px solid rgba(0, 191, 174, 0.4);
+          --s: 10px;
+          position: relative;
+          transform: translate(0);
+          transform-style: preserve-3d;
+          transition: all 0.3s ease;
           z-index: 1;
-        }
-  
-        .validator-card-left {
-          display: flex;
-          flex-direction: column;
-          align-items: center;
-          gap: 30px;
-          min-width: 200px;
-  
-          @include sm {
-            min-width: auto;
+
+          &::before {
+            content: "";
+            position: absolute;
+            inset: -5px;
+            transform: translate3d(0px, 8px, -1px);
+            background: conic-gradient(from 90deg at 30% 23%, rgb(164, 142, 255) 0%, rgb(0, 255, 255) 100%);
+            filter: blur(16px);
+            border-radius: inherit;
           }
-  
-          .validator-icon-container {
-            position: relative;
-            width: 170px;
-            height: 170px;
-            padding: 15%;
-            border-radius: 50%;
-            background: #01101B;
-            border: 3px solid rgba(0, 191, 174, 0.4);
-            --s: 10px;
-            position: relative;
-            transform: translate(0);
-            transform-style: preserve-3d;
-            transition: all 0.3s ease;
-            z-index: 1;
-  
-            &::before {
-              content: "";
-              position: absolute;
-              inset: -5px;
-              transform: translate3d(0px, 8px, -1px);
-              background: conic-gradient(from 90deg at 30% 23%, rgb(164, 142, 255) 0%, rgb(0, 255, 255) 100%);
-              filter: blur(16px);
-              border-radius: inherit;
-            }
-  
-            .validator-icon {
-              width: 100%;
-              height: 100%;
-              background: linear-gradient(135deg, #00AEAE, #009393);
-              border-radius: 50%;
-              display: flex;
-              align-items: center;
-              justify-content: center;
-              position: relative;
-              z-index: 2;
-              border: 3px solid rgba(0, 191, 174, 0.3);
-            }
-          }
-  
-          .validator-actions {
-            display: flex;
-            flex-direction: column;
-            gap: 15px;
+
+          .validator-icon {
             width: 100%;
-  
-            .claim-info-btn,
-            .re-validator-btn {
-              width: 100%;
-              padding: 12px 20px;
-              border: none;
-              border-radius: 25px;
-              font-size: 14px;
-              font-weight: 600;
-              text-transform: uppercase;
-              cursor: pointer;
-              transition: all 0.3s ease;
-              color: #ffffff;
-  
-              &:hover {
-                transform: translateY(-2px);
-              }
-  
-              &:active {
-                transform: translateY(0);
-              }
+            height: 100%;
+            background: linear-gradient(135deg, #00AEAE, #009393);
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            position: relative;
+            z-index: 2;
+            border: 3px solid rgba(0, 191, 174, 0.3);
+          }
+        }
+
+        .validator-actions {
+          display: flex;
+          flex-direction: column;
+          gap: 15px;
+          width: 100%;
+
+          .claim-info-btn,
+          .re-validator-btn {
+            width: 100%;
+            padding: 12px 20px;
+            border: none;
+            border-radius: 25px;
+            font-size: 14px;
+            font-weight: 600;
+            text-transform: uppercase;
+            cursor: pointer;
+            transition: all 0.3s ease;
+            color: #ffffff;
+
+            &:hover {
+              transform: translateY(-2px);
             }
-  
-            .claim-info-btn {
-              background: #684DD9;
-              background: linear-gradient(90deg, rgba(104, 77, 217, 1) 0%, rgba(0, 184, 184, 1) 100%);
-              box-shadow: 0 4px 15px rgba(164, 142, 255, 0.3);
-  
-              &:hover {
-                box-shadow: 0 6px 20px rgba(164, 142, 255, 0.4);
-              }
+
+            &:active {
+              transform: translateY(0);
             }
-  
-            .re-validator-btn {
-              background: #3399CC;
-              background: linear-gradient(90deg, rgba(51, 153, 204, 1) 0%, rgba(0, 204, 204, 1) 100%);
-              box-shadow: 0 4px 15px rgba(0, 191, 174, 0.3);
-  
-              &:hover {
-                box-shadow: 0 6px 20px rgba(0, 191, 174, 0.4);
-              }
+          }
+
+          .claim-info-btn {
+            background: #684DD9;
+            background: linear-gradient(90deg, rgba(104, 77, 217, 1) 0%, rgba(0, 184, 184, 1) 100%);
+            box-shadow: 0 4px 15px rgba(164, 142, 255, 0.3);
+
+            &:hover {
+              box-shadow: 0 6px 20px rgba(164, 142, 255, 0.4);
+            }
+          }
+
+          .re-validator-btn {
+            background: #3399CC;
+            background: linear-gradient(90deg, rgba(51, 153, 204, 1) 0%, rgba(0, 204, 204, 1) 100%);
+            box-shadow: 0 4px 15px rgba(0, 191, 174, 0.3);
+
+            &:hover {
+              box-shadow: 0 6px 20px rgba(0, 191, 174, 0.4);
             }
           }
         }
-  
-        .validator-card-right {
-          flex: 1;
-          display: flex;
-          flex-direction: column;
-          justify-content: space-between;
-  
-          .validator-metrics {
-            .metric-row {
+      }
+
+      .validator-card-right {
+        flex: 1;
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+
+        .validator-metrics {
+          .metric-row {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 12px 0;
+            border-bottom: 2px solid #009393;
+            &:last-child {
+              border-bottom: none;
+            }
+
+            .metric-label {
+              color: #BCC8C8;
+              font-size: 14px;
+              font-weight: 400;
+            }
+
+            .metric-label-t {
+              color: #6399FF;
+              font-size: 14px;
+              font-weight: 400;
+            }
+
+            .metric-value {
+              color: #FFFFFF;
+              font-size: 14px;
+              font-weight: 300;
+
+              .total-value {
+                color: #00bfae;
+                text-decoration: underline;
+                cursor: pointer;
+                font-weight: 300;
+
+                &:hover {
+                  color: #00ffff;
+                }
+              }
+            }
+
+            .metric-value-t {
+              color: #FFFFFF;
+              font-size: 14px;
+              font-weight: 300;
+
+            }
+
+            .metric-value-t {
+              color: #00FFFF;
+              font-size: 14px;
+              font-weight: 300;
+
+            }
+
+            &.period-row {
+              margin: 20px 0;
+
               display: flex;
-              justify-content: space-between;
-              align-items: center;
-              padding: 12px 0;
-              border-bottom: 2px solid #00AEAE;
-              &:last-child {
-                border-bottom: none;
-              }
-  
-              .metric-label {
-                color: #BCC8C8;
-                font-size: 14px;
-                font-weight: 400;
-              }
-  
-              .metric-label-t {
-                color: #6399FF;
-                font-size: 14px;
-                font-weight: 400;
-              }
-  
-              .metric-value {
-                color: #FFFFFF;
-                font-size: 14px;
-                font-weight: 300;
-  
-                .total-value {
-                  color: #00bfae;
-                  text-decoration: underline;
-                  cursor: pointer;
-                  font-weight: 300;
-  
-                  &:hover {
-                    color: #00ffff;
-                  }
+              overflow: hidden;
+
+
+
+              .period-item {
+                flex: 1;
+                padding: 15px;
+                text-align: center;
+                position: relative;
+
+                // Vertical separators between columns
+                &:not(:last-child)::after {
+                  content: '';
+                  position: absolute;
+                  right: 0;
+                  top: 0;
+                  bottom: 0;
+                  width: 1px;
+                  border-right: 2px solid #009393;
+                }
+
+                .period-label {
+                  color: #BCC8C8;
+                  font-size: 12px;
+                  font-weight: 400;
+                  margin-bottom: 8px;
+                  display: block;
+                }
+
+                .period-value {
+                  color: #00FFFF;
+                  font-size: 14px;
+                  font-weight: 500;
+                  display: block;
                 }
               }
-  
-              .metric-value-t {
-                color: #FFFFFF;
-                font-size: 14px;
-                font-weight: 300;
-  
-              }
-  
-              .metric-value-t {
-                color: #00FFFF;
-                font-size: 14px;
-                font-weight: 300;
-  
-              }
-  
-              &.period-row {
-                margin: 20px 0;
-  
-                display: flex;
-                overflow: hidden;
-  
-  
-  
-                .period-item {
-                  flex: 1;
-                  padding: 15px;
-                  text-align: start;
-                  position: relative;
-  
-                  // Vertical separators between columns
-                  &:not(:last-child)::after {
-                    content: '';
-                    position: absolute;
-                    right: 0;
-                    top: 0;
-                    bottom: 0;
-                    width: 1px;
-                    border-right: 2px solid #00AEAE;
-                    text-align: center;
-                  }
-  
-                  .period-label {
-                    color: #BCC8C8;
-                    font-size: 12px;
-                    font-weight: 400;
-                    margin-bottom: 8px;
-                    display: block;
-                  }
-  
-                  .period-value {
-                    color: #00FFFF;
-                    font-size: 14px;
-                    font-weight: 500;
-                    display: block;
-                  }
-                }
-              }
-  
-              &.total-row {
-                margin-top: 20px;
-                padding-top: 20px;
-  
-              }
+            }
+
+            &.total-row {
+              margin-top: 20px;
+              padding-top: 20px;
+
             }
           }
         }
       }
     }
+  }
 }
-.tag-banner{
+
+.tag-banner {
   transform: translateY(-70px);
 }
+
 .overview-tag {
   position: relative;
   z-index: 3;
+
   .nav-item {
     .nav-link {
       border: 1px solid transparent;
@@ -282,6 +302,7 @@
       background: transparent;
       color: #00AEAE;
       border: 2px solid transparent;
+
       @include sm {
         padding-left: 10px !important;
         padding-right: 10px !important;
