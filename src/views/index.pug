@@ -1,18 +1,19 @@
 extends _layouts/master
 
 block content
-    .home
-        .modal.fade#stakeModal(tabindex="-1" aria-labelledby="stakeModal" aria-hidden="true")
+    
+    .modal.fade#stakeModal(tabindex="-1" aria-labelledby="stakeModal" aria-hidden="true")
             .modal-dialog.modal-dialog-centered
                 .modal-content
-                    .modal-header
+                    .modal-header.py-0.pe-0.align-items-start
                         .validator-header
                             .validator-icon-container
                                 img.validator-icon(src="./client/images/t-cap-1.png" alt="TCAPY Validator")
                                 
                             .validator-title
-                                span.title-text Validators hold TCAPY
-                        button.btn-close(type='button' data-bs-dismiss='modal' aria-label='Close')           
+                                span.title-text.px-2 Validators hold TCAPY
+                        button.btn.text-white(type='button' data-bs-dismiss='modal' aria-label='Close')      
+                            i.fa-solid.fa-xmark     
                     
                     .modal-body
                         .stake-form
@@ -49,13 +50,14 @@ block content
 
                     .modal-footer
                         button.stake-confirm-btn STAKE
-        .modal.fade#holdModal(tabindex="-1" aria-labelledby="holdModal" aria-hidden="true")
+    .modal.fade#holdModal(tabindex="-1" aria-labelledby="holdModal" aria-hidden="true")
             .modal-dialog.modal-dialog-centered
                 .modal-content
                     .modal-header
                         .validator-header
                             .validator-icon-container
-                                img.validator-icon(src="./client/images/t-cap.png" alt="TCAPY Validator")
+                                .validator-icon
+                                    img(src="./client/images/t-cap.png" alt="TCAPY Validator")
                                 
                             .validator-title
                                 span.title-text Validators hold TCAPY
@@ -95,18 +97,20 @@ block content
                                 .form-value.apy-value 5%
 
                     .modal-footer
-                        button.stake-confirm-btn HOLD
-        .container
-            .row
-                .col-lg-6.col-md-6.col-sm-12.d-flex.justify-content-center.align-items-center
-                    img.key-icon(src="client/images/tingnode-img.png")
-                .col-lg-6.col-md-6.col-sm-12.d-flex.justify-content-center.align-items-center
-                    img.key-tingnode(src="client/images/tingnode-banner.png")
+                        button.stake-confirm-btn HOLD            
+    .banner
+        img.img-banner(src="client/images/banner.png")
+        video.banner-video(src="client/images/banner-video.mp4" autoplay loop muted)
+        .banner-content
+            .container.h-100
+                .row.h-100.justify-content-center.align-items-center
+                    .col-8.col-lg-4
+                        img.w-100.floating(src="client/images/wellcome.png")
+
     .validators 
         .container
-            .my-4.d-flex.justify-content-center.align-items-center.validators-title-text
-                span.validators-title-text-v.me-2 Validators 
-                span.validators-title-text-t TINGNODE
+            .my-4.text-center.validators-title.text-uppercase
+                | Validators TINGNODE
             .row.pt-5 
                 .col-lg-6.col-md-12.col-sm-12.d-flex.justify-content-center.align-items-center.pt-3
                     .validator-dashboard
@@ -168,7 +172,7 @@ block content
                                         .metric-value.holders 15,000
 
                                 .validator-action
-                                    button.stake-button(data-bs-toggle="modal" data-bs-target="#stakeModal") STAKE
+                                    button.hold-button(data-bs-toggle="modal" data-bs-target="#stakeModal") STAKE
 
 
 
