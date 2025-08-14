@@ -1,0 +1,82 @@
+extends _layouts/master
+
+block content
+    .validators-page
+        .validators-title.text-center.text-gradient
+            | Validators
+        .validators-main
+            .container 
+                ul.nav.nav-pills.overview-tag.my-4.justify-content-center(role="tablist")
+                    li.nav-item(role="presentation")
+                        button.nav-link.active(data-bs-toggle="pill" data-bs-target="#active" type="button" role="tab" aria-controls="pills-home" aria-selected="true") ACTIVE
+                    li.nav-item(role="presentation")
+                        button.nav-link(data-bs-toggle="pill" data-bs-target="#inactive" type="button" role="tab" aria-controls="pills-profile" aria-selected="false") INACTIVE
+                .tab-content
+                    #active.tab-pane.fade.show.active(role="tabpanel", aria-labelledby="pills-home-tab", tabindex="0") 
+                        .table-border
+                            .table-responsive
+                                table.table.table-striped.mb-0.text-center.align-middle
+                                    thead.text-nowrap
+                                        tr
+                                            th Rank
+                                            th Validator
+                                            th Total Stakle
+                                            th Status
+                                            th Power 
+                                            th Uptime 
+                                            th Missed Confirmations
+                                            th Active 
+                                            th Efficiency
+                                            th Commission
+                                            th Delegators
+                                    tbody
+                                         -for (let i = 0; i < 5; i++)
+                                            tr
+                                                td 1
+                                                td 
+                                                    .d-flex.align-items-center.gap-2
+                                                        .flag-circle
+                                                            img(src="client/images/t-cap.png" alt="" width="30" height="30")
+                                                        .text-white.w-100.text-start 
+                                                            .fw-bold.text-white Validator 1
+                                                            .text-white 0x1234567890abcdef
+                                                        button.btn.btn-delegate.px-2.py-0 Delagate    
+                                                td 10 TCAPY
+                                                td 
+                                                    .badge.bg-success Active
+                                                td 100%
+                                                td 0
+                                                td 100%
+                                                td 100%
+                                                td 100%
+                                                td 100%
+                                                td 2088
+                    #inactive.tab-pane.fade(role="tabpanel", aria-labelledby="pills-profile-tab", tabindex="0") 
+                        .table-border
+                            .table-responsive
+                                table.table.table-striped.mb-0.text-center.align-middle
+                                    thead.text-nowrap
+                                        tr
+                                            th Rank
+                                            th Validator
+                                            th Total Stakle
+                                            th Status
+                                            th Commission
+                                            th Delegators
+                                    tbody
+                                        -for (let i = 0; i < 5; i++)
+                                            tr
+                                                td 1
+                                                td 
+                                                    .d-flex.align-items-center.gap-3.justify-content-center
+                                                        .flag-circle
+                                                            img(src="client/images/t-cap.png" alt="" width="30" height="30")
+                                                        .text-white.text-start 
+                                                            .fw-bold.text-white Validator 1
+                                                            .text-white 0x1234567890abcdef
+                                                        button.btn.btn-delegate.px-2.py-0 Delagate    
+                                                td 10 TCAPY
+                                                td 
+                                                    .badge.bg-danger Jailed
+                                                td 10%
+                                                td 2088
