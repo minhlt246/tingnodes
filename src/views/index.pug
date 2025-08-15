@@ -103,8 +103,13 @@ block content
         .banner-content
             .container.h-100
                 .row.h-100.justify-content-center.align-items-center
-                    .col-8.col-lg-4.wow.fadeInUp(data-wow-delay="0.3s" data-wow-duration="1s")
-                        img.w-100.floating(src="client/images/wellcome.png")
+                    .col-md-6.col-lg-4.wow.fadeInUp(data-wow-delay="0.3s" data-wow-duration="1s")
+                        .wellcome-content.floating
+                            .title.text-center.fw-bold.mb-3.text-gradient
+                                | Welcome to 
+                            .name.text-center.text-uppercase Ting
+                                span.text-white Node    
+                            
 
     .validators.pb-3.pb-lg-5 
         .container
@@ -119,8 +124,8 @@ block content
                                     img.validator-icon(src="client/images/t-cap.png" alt="")
                             .validator-right
                                 .validator-title.text-center.fw-bold
-                                    span.title-text Validators hold 
-                                    span.highlight TCAPY
+                                    span.title-text.rounded.p-2 Validators hold 
+                                        span.highlight TCAPY
 
                                 .validator-metrics
                                     .metric-item
@@ -150,8 +155,8 @@ block content
                                     img.validator-icon(src="client/images/t-cap-1.png" alt="")
                             .validator-right
                                 .validator-title.text-center.fw-bold
-                                    span.title-text Validators hold 
-                                    span.highlight TCAPY
+                                    span.title-text.rounded.p-2 Validators hold 
+                                        span.highlight TCAPY
 
                                 .validator-metrics
                                     .metric-item
